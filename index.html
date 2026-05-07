@@ -3,55 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Abhii Designs creates premium mobile-first websites, branding, SEO-friendly structures, and frontend experiences for local businesses, startups, creators, shops, and institutes." />
-  <meta name="theme-color" content="#020617" />
-  <title>Abhii Designs — Premium Mobile-First Websites</title>
+  <meta name="description" content="Abhi is a web designer and frontend developer creating premium, mobile-first, high-converting websites for modern businesses, brands, creators, and local companies." />
+  <meta name="theme-color" content="#f7f2e8" />
+  <title>Abhi — Premium Web Designer & Frontend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
 
     :root {
-      color-scheme: dark;
-      --bg: #020617;
-      --bg-2: #050a18;
-      --panel: rgba(10, 18, 34, 0.74);
-      --panel-strong: rgba(12, 21, 39, 0.92);
-      --glass: rgba(255, 255, 255, 0.066);
-      --line: rgba(148, 163, 184, 0.17);
-      --line-bright: rgba(103, 232, 249, 0.36);
-      --text: #f8fbff;
-      --muted: #91a4bd;
-      --muted-strong: #cad7ea;
-      --cyan: #22d3ee;
-      --blue: #3b82f6;
-      --violet: #8b5cf6;
-      --pink: #d946ef;
-      --green: #4ade80;
-      --shadow: 0 26px 90px rgba(0, 0, 0, 0.42);
+      color-scheme: light;
+      --ivory: #f7f2e8;
+      --paper: #fffaf1;
+      --warm: #eee4d3;
+      --charcoal: #171714;
+      --ink: #25231f;
+      --muted: #736d62;
+      --soft: #9b9385;
+      --navy: #0f2a45;
+      --navy-2: #173e63;
+      --gold: #c9a968;
+      --gold-soft: #eadbbb;
+      --line: rgba(37, 35, 31, 0.12);
+      --line-strong: rgba(15, 42, 69, 0.18);
+      --shadow: 0 24px 80px rgba(23, 23, 20, 0.10);
+      --shadow-soft: 0 14px 40px rgba(23, 23, 20, 0.08);
       --radius: 24px;
       --radius-lg: 34px;
-      --max: 1180px;
-      --header: 66px;
+      --max: 1160px;
+      --header: 72px;
     }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
     body {
       margin: 0;
       min-width: 320px;
       overflow-x: hidden;
       background:
-        radial-gradient(circle at 16% 10%, rgba(34, 211, 238, 0.13), transparent 23rem),
-        radial-gradient(circle at 84% 4%, rgba(139, 92, 246, 0.18), transparent 25rem),
-        radial-gradient(circle at 50% 46%, rgba(59, 130, 246, 0.08), transparent 38rem),
-        linear-gradient(140deg, #020617 0%, #07111f 54%, #020617 100%);
-      color: var(--text);
+        radial-gradient(circle at 16% 6%, rgba(201, 169, 104, 0.18), transparent 28rem),
+        radial-gradient(circle at 86% 16%, rgba(15, 42, 69, 0.10), transparent 30rem),
+        linear-gradient(135deg, var(--ivory), #fbf7ee 58%, #f1e8d9);
+      color: var(--charcoal);
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 16px;
       line-height: 1.65;
+      text-rendering: optimizeLegibility;
     }
 
     body::before {
@@ -61,20 +60,10 @@
       z-index: -2;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.032) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.032) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 42rem);
-      opacity: 0.38;
+        linear-gradient(rgba(15, 42, 69, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 42, 69, 0.035) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
     }
 
     body.loading, body.menu-open { overflow: hidden; }
@@ -89,11 +78,11 @@
       left: 12px;
       top: 12px;
       z-index: 300;
-      transform: translateY(-150%);
+      transform: translateY(-160%);
       padding: 10px 14px;
       border-radius: 999px;
-      background: var(--text);
-      color: var(--bg);
+      background: var(--navy);
+      color: white;
       font-weight: 800;
       text-decoration: none;
     }
@@ -106,67 +95,31 @@
       display: grid;
       place-items: center;
       padding: 28px;
-      background:
-        radial-gradient(circle at 50% 42%, rgba(34,211,238,0.18), transparent 24rem),
-        linear-gradient(145deg, #020617, #050a18 52%, #020617);
+      background: linear-gradient(135deg, #fbf7ee, var(--ivory));
       transition: opacity 520ms ease, transform 520ms ease, visibility 520ms ease;
     }
+    .preloader.is-hidden { opacity: 0; transform: translateY(-8px); visibility: hidden; pointer-events: none; }
+    .loader-card { width: min(100%, 320px); text-align: center; }
+    .loader-name {
+      margin: 0 0 14px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.7rem, 15vw, 4.4rem);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
+      color: var(--navy);
+    }
+    .loader-subtitle { margin: 0 0 22px; color: var(--muted); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+    .loader-line { overflow: hidden; height: 2px; border-radius: 999px; background: rgba(15, 42, 69, 0.12); }
+    .loader-line span { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, var(--navy), var(--gold)); transform-origin: left; animation: loadLine 1.65s cubic-bezier(.2,.8,.2,1) forwards; }
 
-    .preloader.is-hidden { opacity: 0; transform: scale(1.025); visibility: hidden; pointer-events: none; }
-    .loader-card { width: min(100%, 360px); text-align: center; }
-    .loader-devices { position: relative; height: 190px; margin-bottom: 22px; }
-    .loader-laptop {
-      position: absolute;
-      left: 50%;
-      top: 42px;
-      width: 245px;
-      height: 142px;
-      transform: translateX(-50%);
-      border: 2px solid rgba(103,232,249,0.72);
-      border-radius: 18px 18px 10px 10px;
-      background: linear-gradient(135deg, rgba(34,211,238,0.06), rgba(139,92,246,0.08));
-      box-shadow: 0 0 38px rgba(34,211,238,0.22), inset 0 0 28px rgba(34,211,238,0.08);
-      overflow: hidden;
-    }
-    .loader-laptop::after { content: ""; position: absolute; left: 34px; right: 34px; bottom: -18px; height: 12px; border-radius: 0 0 18px 18px; background: rgba(103,232,249,0.42); filter: blur(1px); }
-    .loader-phone {
-      position: absolute;
-      left: calc(50% - 86px);
-      top: 18px;
-      width: 78px;
-      height: 146px;
-      border: 2px solid rgba(196,181,253,0.84);
-      border-radius: 23px;
-      background: rgba(2,6,23,0.72);
-      box-shadow: 0 0 38px rgba(139,92,246,0.34), inset 0 0 20px rgba(139,92,246,0.08);
-      overflow: hidden;
-    }
-    .loader-phone::before, .loader-laptop::before {
-      content: "";
-      position: absolute;
-      inset: -30% auto -30% -40%;
-      width: 38%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.84), transparent);
-      transform: skewX(-18deg);
-      animation: scan 1.45s ease-in-out infinite;
-    }
-    .loader-phone::after { content: ""; position: absolute; top: 9px; left: 50%; width: 26px; height: 4px; transform: translateX(-50%); border-radius: 999px; background: rgba(255,255,255,0.42); }
-    .loader-title { margin: 0 0 14px; font-weight: 900; letter-spacing: -0.04em; }
-    .loader-dots { display: inline-flex; gap: 7px; margin-bottom: 18px; }
-    .loader-dots span { width: 7px; height: 7px; border-radius: 999px; background: var(--cyan); animation: dotPulse 900ms ease-in-out infinite; }
-    .loader-dots span:nth-child(2) { animation-delay: 120ms; background: var(--blue); }
-    .loader-dots span:nth-child(3) { animation-delay: 240ms; background: var(--violet); }
-    .loader-line { overflow: hidden; height: 3px; border-radius: 999px; background: rgba(255,255,255,0.10); }
-    .loader-line span { display: block; height: 100%; width: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--cyan), var(--blue), var(--violet)); transform-origin: left; animation: loadLine 2.45s cubic-bezier(.2,.8,.2,1) forwards; }
-
-    .site-shell { opacity: 0; transform: translateY(10px) scale(0.995); transition: opacity 640ms ease, transform 640ms ease; }
+    .site-shell { opacity: 0; transform: translateY(10px); transition: opacity 620ms ease, transform 620ms ease; }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid rgba(148,163,184,0.13);
-      background: rgba(2, 6, 23, 0.72);
+      border-bottom: 1px solid rgba(37, 35, 31, 0.10);
+      background: rgba(247, 242, 232, 0.82);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
@@ -185,333 +138,353 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.055em;
       text-decoration: none;
-      font-weight: 900;
-      letter-spacing: -0.045em;
       white-space: nowrap;
     }
-
     .brand-mark {
-      width: 38px;
-      height: 38px;
+      width: 34px;
+      height: 34px;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(103, 232, 249, 0.48);
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(34,211,238,0.26), rgba(139,92,246,0.24));
-      box-shadow: 0 0 32px rgba(34,211,238,0.16);
+      border: 1px solid rgba(15, 42, 69, 0.16);
+      border-radius: 13px;
+      background: linear-gradient(145deg, #fffaf1, #eadbbb);
+      box-shadow: 0 10px 26px rgba(23, 23, 20, 0.08);
+      font-family: Inter, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: -0.02em;
     }
 
-    .nav-links { display: none; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+    .nav-links { display: none; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
     .nav-link {
       display: inline-flex;
       align-items: center;
-      min-height: 40px;
+      min-height: 42px;
       padding: 0 13px;
       border-radius: 999px;
       color: var(--muted);
       font-size: 0.88rem;
-      font-weight: 800;
+      font-weight: 700;
       text-decoration: none;
       transition: color 180ms ease, background 180ms ease;
     }
-    .nav-link:hover, .nav-link:focus-visible { color: var(--text); background: rgba(255,255,255,0.065); }
+    .nav-link:hover, .nav-link:focus-visible { color: var(--navy); background: rgba(15, 42, 69, 0.06); }
     .nav-actions { display: flex; align-items: center; gap: 10px; }
 
     .menu-toggle {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 5px;
       border: 1px solid var(--line);
-      border-radius: 15px;
-      background: rgba(255,255,255,0.055);
-      color: var(--text);
+      border-radius: 16px;
+      background: rgba(255, 250, 241, 0.78);
+      color: var(--navy);
       cursor: pointer;
     }
-    .menu-toggle span { width: 20px; height: 2px; border-radius: 999px; background: currentColor; transition: transform 220ms ease, opacity 220ms ease; }
+    .menu-toggle span { width: 19px; height: 2px; border-radius: 999px; background: currentColor; transition: transform 220ms ease, opacity 220ms ease; }
     .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
     .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     .mobile-menu { display: grid; grid-template-rows: 0fr; border-top: 1px solid transparent; transition: grid-template-rows 240ms ease, border-color 240ms ease; }
     .mobile-menu.open { grid-template-rows: 1fr; border-top-color: var(--line); }
-    .mobile-menu-inner { overflow: hidden; width: min(100% - 28px, var(--max)); margin: 0 auto; display: grid; gap: 9px; padding: 0; }
+    .mobile-menu-inner { overflow: hidden; width: min(100% - 28px, var(--max)); margin: 0 auto; display: grid; gap: 8px; padding: 0; }
     .mobile-menu.open .mobile-menu-inner { padding: 12px 0 18px; }
 
     .btn {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 46px;
+      min-height: 48px;
       padding: 0 20px;
-      border: 1px solid transparent;
+      border: 1px solid var(--navy);
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--cyan), var(--blue) 52%, var(--violet));
-      color: #fff;
-      box-shadow: 0 14px 34px rgba(59, 130, 246, 0.25);
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 16px 32px rgba(15, 42, 69, 0.16);
       font-size: 0.92rem;
-      font-weight: 900;
+      font-weight: 800;
       text-decoration: none;
       cursor: pointer;
       touch-action: manipulation;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
     }
-    .btn::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, transparent 0 38%, rgba(255,255,255,0.42) 48%, transparent 58% 100%); transform: translateX(-120%); transition: transform 620ms ease; }
-    .btn:hover, .btn:focus-visible { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(34, 211, 238, 0.27); }
-    .btn:hover::before, .btn:focus-visible::before { transform: translateX(120%); }
-    .btn-secondary { background: rgba(255,255,255,0.065); border-color: var(--line); box-shadow: none; color: var(--muted-strong); }
-    .btn-small { min-height: 40px; padding: 0 15px; font-size: 0.83rem; }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); background: var(--navy-2); box-shadow: 0 20px 44px rgba(15, 42, 69, 0.20); }
+    .btn-secondary { background: rgba(255, 250, 241, 0.74); border-color: rgba(15, 42, 69, 0.18); box-shadow: none; color: var(--navy); }
+    .btn-secondary:hover, .btn-secondary:focus-visible { background: white; }
+    .btn-small { min-height: 40px; padding: 0 15px; font-size: 0.82rem; }
     .desktop-cta { display: none; }
 
-    .section { width: min(100% - 28px, var(--max)); margin: 0 auto; padding: 70px 0; }
-    .hero { min-height: calc(100svh - var(--header)); padding-top: 34px; display: grid; align-items: center; }
-    .hero-grid { display: grid; gap: 28px; align-items: center; }
-    .hero-content { position: relative; z-index: 2; }
+    .section { width: min(100% - 28px, var(--max)); margin: 0 auto; padding: 72px 0; }
+    .hero { min-height: calc(100svh - var(--header)); padding-top: 30px; display: grid; align-items: center; }
+    .hero-grid { display: grid; gap: 34px; align-items: center; }
 
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-bottom: 15px; padding: 8px 12px; border: 1px solid rgba(74,222,128,0.25); border-radius: 999px; background: rgba(74,222,128,0.085); color: #bbf7d0; font-size: 0.8rem; font-weight: 900; }
-    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 6px rgba(74,222,128,0.12), 0 0 18px rgba(74,222,128,0.78); }
     h1, h2, h3, p { margin-top: 0; }
-    .hero h1 { margin-bottom: 17px; max-width: 860px; font-size: clamp(2.55rem, 12vw, 5.7rem); line-height: 0.94; letter-spacing: -0.078em; }
-    .gradient-text { background: linear-gradient(110deg, #fff 0%, #dffaff 38%, #bdb8ff 72%, #f0abfc 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero-copy { max-width: 690px; margin-bottom: 22px; color: var(--muted-strong); font-size: clamp(0.99rem, 3.4vw, 1.18rem); }
-    .hero-actions, .contact-actions, .project-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .trust-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-    .trust-badge, .tag, .skill-tag, .orbit-chip { display: inline-flex; align-items: center; min-height: 30px; padding: 0 11px; border: 1px solid rgba(148,163,184,0.18); border-radius: 999px; background: rgba(255,255,255,0.055); color: var(--muted-strong); font-size: 0.75rem; font-weight: 850; }
-    .trust-badge::before { content: ""; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px rgba(34,211,238,0.7); }
-    .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 22px; }
-    .stat-card, .service-card, .project-card, .process-card, .about-panel, .contact-panel { border: 1px solid var(--line); background: linear-gradient(145deg, rgba(15,23,42,0.82), rgba(15,23,42,0.50)); box-shadow: var(--shadow); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-    .stat-card { min-height: 88px; padding: 15px; border-radius: 20px; }
-    .stat-card strong { display: block; color: var(--text); font-size: clamp(1.35rem, 7vw, 2.05rem); line-height: 1; letter-spacing: -0.05em; }
-    .stat-card span { display: block; margin-top: 8px; color: var(--muted); font-size: 0.79rem; font-weight: 800; }
+    h1, h2, h3 { color: var(--charcoal); letter-spacing: -0.055em; }
+    .serif { font-family: "Playfair Display", Georgia, serif; font-weight: 700; }
 
-    .hero-visual { --tilt-x: 0deg; --tilt-y: 0deg; position: relative; min-height: 405px; perspective: 900px; }
-    .device-stage { position: relative; width: min(100%, 560px); height: 405px; margin: 0 auto; transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y)); transform-style: preserve-3d; transition: transform 180ms ease-out; }
-    .device-glow { position: absolute; inset: 20% 6% 4%; border-radius: 999px; background: radial-gradient(circle, rgba(34,211,238,0.24), rgba(139,92,246,0.14) 44%, transparent 70%); filter: blur(18px); }
+    .eyebrow, .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before, .section-kicker::before { content: ""; width: 34px; height: 1px; background: var(--gold); }
+    .hero h1 { margin-bottom: 18px; max-width: 780px; font-size: clamp(2.7rem, 12vw, 6rem); line-height: 0.96; }
+    .hero-copy { max-width: 680px; margin-bottom: 24px; color: var(--muted); font-size: clamp(1rem, 3.4vw, 1.22rem); }
+    .hero-actions, .project-actions, .cta-actions, .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .trust-badge, .tag, .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 250, 241, 0.70);
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+    .trust-badge::before { content: ""; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: var(--gold); }
 
-    .laptop-device { position: absolute; right: 2%; top: 34px; width: min(88%, 455px); padding: 10px; border: 1px solid rgba(255,255,255,0.15); border-radius: 24px; background: linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.035)); box-shadow: 0 30px 78px rgba(0,0,0,0.48); animation: floatLaptop 7s ease-in-out infinite; }
-    .laptop-device::after { content: ""; position: absolute; left: 9%; right: 9%; bottom: -14px; height: 14px; border-radius: 0 0 20px 20px; background: linear-gradient(90deg, rgba(148,163,184,0.28), rgba(34,211,238,0.22), rgba(148,163,184,0.28)); }
-    .laptop-screen { overflow: hidden; min-height: 245px; border: 1px solid rgba(255,255,255,0.1); border-radius: 17px; background: #07111f; }
-    .window-bar { display: flex; align-items: center; gap: 7px; padding: 11px 13px; border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.035); }
+    .hero-visual { position: relative; min-height: 390px; }
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 390px;
+      padding: 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, rgba(255, 250, 241, 0.92), rgba(238, 228, 211, 0.72));
+      box-shadow: var(--shadow);
+    }
+    .hero-card::before { content: ""; position: absolute; inset: -30% -20% auto auto; width: 260px; height: 260px; border-radius: 50%; background: rgba(201, 169, 104, 0.24); filter: blur(6px); }
+    .browser-mock {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(15, 42, 69, 0.13);
+      border-radius: 24px;
+      background: #fffaf1;
+      box-shadow: 0 26px 64px rgba(23, 23, 20, 0.12);
+    }
+    .window-bar { display: flex; align-items: center; gap: 8px; padding: 13px; border-bottom: 1px solid rgba(15, 42, 69, 0.10); }
     .dots { display: flex; gap: 6px; }
-    .dots span { width: 9px; height: 9px; border-radius: 50%; background: #64748b; }
-    .dots span:nth-child(1) { background: #fb7185; } .dots span:nth-child(2) { background: #facc15; } .dots span:nth-child(3) { background: #34d399; }
-    .url-pill { flex: 1; margin-left: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.055); color: var(--muted); font-size: 0.68rem; text-align: center; }
-    .dashboard { display: grid; grid-template-columns: 0.85fr 1.2fr; gap: 14px; padding: 15px; }
-    .dash-panel { min-height: 92px; padding: 14px; border: 1px solid rgba(255,255,255,0.10); border-radius: 17px; background: rgba(255,255,255,0.045); }
-    .dash-panel.hero-preview { grid-column: 1 / -1; min-height: 104px; background: radial-gradient(circle at 78% 18%, rgba(217,70,239,0.28), transparent 36%), linear-gradient(135deg, rgba(34,211,238,0.18), rgba(59,130,246,0.10)); }
-    .dash-line { height: 9px; border-radius: 999px; background: rgba(255,255,255,0.76); }
-    .dash-line.short { width: 44%; } .dash-line.mid { width: 68%; margin-top: 11px; opacity: 0.44; } .dash-line.tiny { width: 38%; margin-top: 11px; opacity: 0.34; }
-    .dash-grid { display: grid; gap: 9px; } .dash-grid span { height: 28px; border-radius: 10px; background: linear-gradient(90deg, rgba(34,211,238,0.16), rgba(139,92,246,0.10)); }
-    .dash-meter { height: 74px; border-radius: 14px; background: conic-gradient(from 180deg, var(--cyan), var(--blue), var(--violet), rgba(255,255,255,0.09) 78%); mask: radial-gradient(circle, transparent 42%, #000 43%); }
+    .dots span { width: 8px; height: 8px; border-radius: 50%; background: #d5c5a8; }
+    .url-pill { flex: 1; padding: 6px 10px; border-radius: 999px; background: rgba(238, 228, 211, 0.70); color: var(--soft); font-size: 0.68rem; text-align: center; }
+    .mock-body { display: grid; gap: 16px; padding: 18px; }
+    .mock-hero { min-height: 136px; padding: 18px; border-radius: 20px; background: linear-gradient(135deg, var(--navy), #183d5c); color: white; }
+    .mock-line { display: block; height: 9px; margin-bottom: 10px; border-radius: 999px; background: currentColor; opacity: 0.25; }
+    .mock-line.big { width: 68%; height: 15px; opacity: 0.92; }
+    .mock-line.mid { width: 48%; }
+    .mock-line.short { width: 32%; }
+    .mock-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .mock-grid span { min-height: 76px; border: 1px solid rgba(15, 42, 69, 0.10); border-radius: 18px; background: linear-gradient(145deg, #fff, #f0e6d6); }
+    .phone-mock {
+      position: absolute;
+      right: 12px;
+      bottom: 14px;
+      width: 120px;
+      min-height: 230px;
+      padding: 9px;
+      border: 1px solid rgba(15, 42, 69, 0.16);
+      border-radius: 30px;
+      background: #171714;
+      box-shadow: 0 22px 50px rgba(23, 23, 20, 0.20);
+    }
+    .phone-screen { min-height: 210px; padding: 13px; border-radius: 23px; background: linear-gradient(160deg, #fffaf1, #eadeca); }
+    .phone-block { min-height: 86px; margin-bottom: 10px; border-radius: 18px; background: var(--navy); }
+    .phone-row { height: 34px; margin-bottom: 8px; border-radius: 14px; background: rgba(15, 42, 69, 0.10); }
 
-    .phone-device { position: absolute; left: 6%; bottom: 8px; z-index: 3; width: min(43vw, 188px); min-width: 142px; padding: 10px; border: 1px solid rgba(255,255,255,0.18); border-radius: 34px; background: linear-gradient(145deg, rgba(12,21,39,0.98), rgba(7,17,31,0.82)); box-shadow: 0 30px 78px rgba(0,0,0,0.58), 0 0 46px rgba(34,211,238,0.12); animation: floatPhone 6s ease-in-out infinite; }
-    .phone-device::before { content: ""; position: absolute; top: 13px; left: 50%; z-index: 2; width: 42px; height: 5px; transform: translateX(-50%); border-radius: 999px; background: rgba(255,255,255,0.28); }
-    .phone-screen { overflow: hidden; min-height: 294px; padding: 23px 12px 12px; border: 1px solid rgba(255,255,255,0.1); border-radius: 25px; background: radial-gradient(circle at 80% 8%, rgba(139,92,246,0.32), transparent 32%), linear-gradient(160deg, rgba(34,211,238,0.14), rgba(139,92,246,0.12)), #07111f; }
-    .mobile-hero-preview { min-height: 92px; padding: 14px; border-radius: 18px; background: linear-gradient(135deg, rgba(34,211,238,0.18), rgba(217,70,239,0.16)); }
-    .mini-button { width: 74px; height: 24px; margin-top: 14px; border-radius: 999px; background: linear-gradient(135deg, var(--cyan), var(--violet)); }
-    .phone-cards { display: grid; gap: 9px; margin-top: 10px; }
-    .phone-mini-card { min-height: 54px; padding: 10px; border: 1px solid rgba(255,255,255,0.09); border-radius: 15px; background: rgba(255,255,255,0.052); animation: cardPulse 2.8s ease-in-out infinite; }
-    .phone-mini-card:nth-child(2) { animation-delay: 600ms; }
+    .section-heading { max-width: 780px; margin-bottom: 16px; font-size: clamp(2rem, 8vw, 4.3rem); line-height: 1.02; }
+    .section-intro { max-width: 660px; margin-bottom: 30px; color: var(--muted); font-size: clamp(0.98rem, 3vw, 1.08rem); }
 
-    .orbit-chip { position: absolute; z-index: 4; box-shadow: 0 10px 26px rgba(0,0,0,0.24); animation: orbitFloat 5s ease-in-out infinite; }
-    .chip-ui { left: 2%; top: 48px; } .chip-seo { right: 6%; top: 12px; animation-delay: 500ms; } .chip-branding { right: 0; bottom: 112px; animation-delay: 900ms; } .chip-react { left: 3%; bottom: 84px; animation-delay: 1300ms; } .chip-landing { left: 40%; bottom: 22px; animation-delay: 1700ms; }
-
-    .section-kicker { margin-bottom: 10px; color: var(--cyan); font-size: 0.76rem; font-weight: 950; letter-spacing: 0.16em; text-transform: uppercase; }
-    .section-heading { margin-bottom: 14px; font-size: clamp(2rem, 8.5vw, 4rem); line-height: 1; letter-spacing: -0.066em; }
-    .section-intro { max-width: 720px; margin-bottom: 30px; color: var(--muted-strong); font-size: 1rem; }
-
-    .projects-grid { display: grid; gap: 18px; }
-    .project-card { overflow: hidden; border-radius: var(--radius-lg); transition: transform 180ms ease, border-color 180ms ease, background 180ms ease; }
-    .project-card:active { transform: scale(0.99); }
-    .project-visual { position: relative; min-height: 255px; padding: 20px; background: radial-gradient(circle at 72% 22%, rgba(34,211,238,0.24), transparent 35%), linear-gradient(135deg, rgba(59,130,246,0.18), rgba(139,92,246,0.16)); }
-    .project-card:nth-child(2) .project-visual { background: radial-gradient(circle at 22% 20%, rgba(217,70,239,0.26), transparent 35%), linear-gradient(135deg, rgba(139,92,246,0.22), rgba(34,211,238,0.11)); }
-    .project-card:nth-child(3) .project-visual { background: radial-gradient(circle at 80% 12%, rgba(74,222,128,0.20), transparent 35%), linear-gradient(135deg, rgba(34,211,238,0.15), rgba(59,130,246,0.14)); }
-    .project-card:nth-child(4) .project-visual { background: radial-gradient(circle at 70% 16%, rgba(251,113,133,0.20), transparent 35%), linear-gradient(135deg, rgba(217,70,239,0.15), rgba(34,211,238,0.13)); }
-    .project-mock { position: relative; height: 230px; }
-    .project-laptop { position: absolute; inset: 6px 0 auto 0; min-height: 166px; padding: 8px; border: 1px solid rgba(255,255,255,0.14); border-radius: 20px; background: rgba(2,6,23,0.52); box-shadow: 0 18px 50px rgba(0,0,0,0.32); }
-    .project-screen { overflow: hidden; min-height: 150px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); background: #07111f; }
-    .project-phone { position: absolute; right: 18px; bottom: 0; width: 86px; padding: 7px; border: 1px solid rgba(255,255,255,0.17); border-radius: 22px; background: rgba(2,6,23,0.78); box-shadow: 0 20px 44px rgba(0,0,0,0.38); }
-    .project-phone-screen { min-height: 151px; padding: 12px 8px; border-radius: 16px; background: linear-gradient(160deg, rgba(34,211,238,0.17), rgba(139,92,246,0.15)), #07111f; }
-    .preview-hero { min-height: 67px; padding: 12px; background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.035)); border-radius: 13px; }
-    .preview-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 10px; }
-    .preview-grid span { height: 42px; border-radius: 11px; background: rgba(255,255,255,0.062); border: 1px solid rgba(255,255,255,0.07); }
+    .projects-grid, .services-grid, .trust-grid { display: grid; gap: 16px; }
+    .project-card, .service-card, .trust-card, .about-panel, .cta-panel, .contact-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 241, 0.78);
+      box-shadow: var(--shadow-soft);
+    }
+    .project-card { overflow: hidden; display: grid; }
+    .project-visual { min-height: 250px; padding: 18px; background: linear-gradient(145deg, #ede1cd, #fff8ec); }
+    .project-preview {
+      position: relative;
+      overflow: hidden;
+      min-height: 214px;
+      border: 1px solid rgba(15, 42, 69, 0.12);
+      border-radius: 22px;
+      background: #fffaf1;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+    }
+    .project-preview::after { content: ""; position: absolute; right: -34px; top: -40px; width: 150px; height: 150px; border-radius: 50%; background: rgba(201, 169, 104, 0.30); }
+    .preview-inner { position: relative; z-index: 1; display: grid; gap: 12px; padding: 16px; }
+    .preview-hero { min-height: 90px; padding: 15px; border-radius: 18px; background: var(--navy); color: white; }
+    .preview-list { display: grid; gap: 8px; }
+    .preview-list span { height: 34px; border-radius: 13px; background: rgba(15, 42, 69, 0.08); }
     .project-content { padding: 22px; }
-    .project-content h3 { margin-bottom: 8px; font-size: 1.38rem; letter-spacing: -0.04em; }
-    .service-card p, .project-card p, .process-card p, .about-panel p, .contact-panel p { color: var(--muted); }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+    .project-content h3, .service-card h3, .trust-card h3 { margin-bottom: 8px; font-size: 1.32rem; }
+    .project-content p, .service-card p, .trust-card p, .about-panel p, .cta-panel p, .contact-panel p { color: var(--muted); }
+    .tags, .skills-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 18px; }
 
-    .services-grid { display: grid; gap: 14px; }
-    .service-card { position: relative; overflow: hidden; padding: 24px; border-radius: var(--radius); transition: transform 180ms ease, border-color 180ms ease, background 180ms ease; }
-    .service-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, transparent, rgba(34,211,238,0.52), transparent, rgba(139,92,246,0.42)); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; opacity: 0; transition: opacity 180ms ease; }
-    .service-card::after { content: ""; position: absolute; inset: auto -44px -70px auto; width: 140px; height: 140px; border-radius: 50%; background: rgba(34,211,238,0.13); filter: blur(8px); transition: transform 220ms ease, opacity 220ms ease; }
-    .service-card:hover::before { opacity: 1; }
-    .service-card:hover, .service-card:focus-within, .project-card:hover, .process-card:hover { transform: translateY(-5px); border-color: rgba(34,211,238,0.34); background: linear-gradient(145deg, rgba(15,23,42,0.94), rgba(15,23,42,0.62)); }
-    .service-icon { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 20px; border-radius: 16px; background: linear-gradient(135deg, rgba(34,211,238,0.17), rgba(139,92,246,0.17)); color: var(--cyan); font-size: 1.3rem; }
-    .service-card h3, .process-card h3 { margin-bottom: 10px; font-size: 1.18rem; letter-spacing: -0.035em; }
-    .service-card p { margin-bottom: 0; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card, .trust-card { padding: 22px; transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+    .service-card:hover, .trust-card:hover, .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(15, 42, 69, 0.18); }
+    .service-icon, .trust-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      background: #efe3ce;
+      color: var(--navy);
+      font-weight: 900;
+    }
 
-    .process-grid { position: relative; display: grid; gap: 14px; counter-reset: process; }
-    .process-card { position: relative; padding: 24px; border-radius: var(--radius); transition: transform 180ms ease, border-color 180ms ease; counter-increment: process; }
-    .process-card::before { content: "0" counter(process); display: inline-grid; place-items: center; width: 46px; height: 46px; margin-bottom: 20px; border-radius: 16px; background: rgba(34,211,238,0.10); color: var(--cyan); font-weight: 950; box-shadow: inset 0 0 0 1px rgba(34,211,238,0.14); }
-    .process-card::after { content: ""; position: absolute; top: 48px; left: 70px; width: 30%; height: 1px; background: linear-gradient(90deg, rgba(34,211,238,0.48), transparent); }
+    .trust-section { padding-top: 18px; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .trust-number { font-size: 0.84rem; color: var(--gold); background: var(--navy); }
 
-    .about-grid { display: grid; gap: 18px; }
-    .about-panel, .contact-panel { padding: 26px; border-radius: var(--radius-lg); }
-    .about-panel.lead { background: linear-gradient(145deg, rgba(34,211,238,0.12), rgba(15,23,42,0.66)); }
-    .about-panel h3 { margin-bottom: 12px; font-size: 1.2rem; letter-spacing: -0.03em; }
-    .skills-list { display: flex; flex-wrap: wrap; gap: 9px; }
-    .skill-tag { animation: chipBreathe 3.4s ease-in-out infinite; }
-    .skill-tag:nth-child(2n) { animation-delay: 700ms; }
+    .about-grid { display: grid; gap: 16px; align-items: stretch; }
+    .about-panel { padding: 24px; }
+    .about-panel.featured { background: var(--navy); color: white; }
+    .about-panel.featured h2, .about-panel.featured p { color: white; }
+    .about-panel.featured p { opacity: 0.78; }
+    .about-note { display: grid; place-items: center; min-height: 180px; border: 1px solid rgba(255,255,255,0.16); border-radius: 24px; background: rgba(255,255,255,0.06); text-align: center; }
+    .about-note strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 4rem; line-height: 1; }
 
-    .contact-panel { position: relative; overflow: hidden; display: grid; gap: 24px; background: radial-gradient(circle at 86% 10%, rgba(34,211,238,0.18), transparent 28%), linear-gradient(145deg, rgba(15,23,42,0.94), rgba(15,23,42,0.60)); }
-    .contact-panel::before { content: ""; position: absolute; width: 230px; height: 230px; right: -90px; bottom: -110px; border-radius: 50%; background: rgba(139,92,246,0.18); filter: blur(8px); }
-    .contact-copy, .contact-device { position: relative; z-index: 1; }
-    .contact-panel h2 { max-width: 760px; }
-    .contact-panel p { max-width: 675px; margin-bottom: 24px; }
-    .contact-device { justify-self: center; width: 156px; padding: 9px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.17); background: rgba(2,6,23,0.68); box-shadow: 0 24px 58px rgba(0,0,0,0.42); }
-    .contact-screen { min-height: 250px; display: grid; align-content: center; gap: 12px; padding: 18px; text-align: center; border-radius: 22px; background: radial-gradient(circle at 70% 14%, rgba(74,222,128,0.24), transparent 34%), linear-gradient(160deg, rgba(34,211,238,0.15), rgba(139,92,246,0.14)), #07111f; }
-    .contact-screen strong { font-size: 1.25rem; line-height: 1.1; letter-spacing: -0.04em; }
-    .contact-screen span { color: var(--muted-strong); font-size: 0.8rem; font-weight: 800; }
+    .cta-panel {
+      overflow: hidden;
+      position: relative;
+      padding: clamp(28px, 7vw, 58px);
+      background: linear-gradient(135deg, var(--navy), #183d5c);
+      color: white;
+    }
+    .cta-panel::after { content: ""; position: absolute; right: -80px; top: -90px; width: 260px; height: 260px; border-radius: 50%; background: rgba(201, 169, 104, 0.24); }
+    .cta-panel h2 { position: relative; z-index: 1; max-width: 760px; color: white; }
+    .cta-panel p { position: relative; z-index: 1; max-width: 650px; color: rgba(255,255,255,0.72); }
+    .cta-actions { position: relative; z-index: 1; margin-top: 24px; }
+    .cta-panel .btn { background: #fffaf1; color: var(--navy); border-color: #fffaf1; }
+    .cta-panel .btn-secondary { background: transparent; color: white; border-color: rgba(255,255,255,0.28); }
 
-    .contact-form { display: grid; gap: 12px; margin-top: 26px; }
+    .contact-grid { display: grid; gap: 16px; }
+    .contact-panel { padding: 24px; }
+    .contact-form { display: grid; gap: 12px; }
     .form-row { display: grid; gap: 12px; }
-    .contact-input, .contact-textarea { width: 100%; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,0.055); color: var(--text); padding: 14px 16px; outline: none; transition: border-color 180ms ease, box-shadow 180ms ease; }
-    .contact-textarea { min-height: 118px; resize: vertical; }
-    .contact-input::placeholder, .contact-textarea::placeholder { color: #7d8da7; }
-    .contact-input:focus, .contact-textarea:focus, .menu-toggle:focus-visible, .btn:focus-visible, .nav-link:focus-visible { outline: 3px solid rgba(34,211,238,0.24); outline-offset: 3px; }
-    .contact-input:focus, .contact-textarea:focus { border-color: rgba(34,211,238,0.55); box-shadow: 0 0 0 4px rgba(34,211,238,0.08); }
-    .form-status { display: none; margin: 8px 0 0; font-size: 0.9rem; font-weight: 800; }
-    .form-status.success { display: block; color: #86efac; }
-    .form-status.error { display: block; color: #fca5a5; }
+    .contact-input, .contact-textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.58);
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+    .contact-input { min-height: 50px; padding: 0 16px; }
+    .contact-textarea { min-height: 132px; padding: 15px 16px; resize: vertical; }
+    .contact-input:focus, .contact-textarea:focus { border-color: rgba(15, 42, 69, 0.42); box-shadow: 0 0 0 4px rgba(15, 42, 69, 0.08); background: white; }
+    .form-status { min-height: 24px; margin: 0; font-size: 0.9rem; font-weight: 700; }
+    .form-status.success { color: #256f43; }
+    .form-status.error { color: #a33b2f; }
 
-    .footer { border-top: 1px solid var(--line); padding: 28px 0; background: rgba(3,7,18,0.48); }
-    .footer-inner { width: min(100% - 28px, var(--max)); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; color: var(--muted); font-size: 0.9rem; }
-    .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
-    .footer-links a { color: var(--muted-strong); text-decoration: none; font-weight: 800; }
-    .footer-links a:hover { color: var(--cyan); }
+    .footer { padding: 26px 0 34px; border-top: 1px solid var(--line); }
+    .footer-inner { width: min(100% - 28px, var(--max)); margin: 0 auto; display: flex; flex-direction: column; gap: 14px; color: var(--muted); font-size: 0.9rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 14px; }
+    .footer a { color: var(--navy); font-weight: 800; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
 
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 620ms ease, transform 620ms ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity 620ms ease, transform 620ms ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-    @keyframes scan { 0% { left: -42%; } 100% { left: 120%; } }
-    @keyframes dotPulse { 0%, 100% { transform: translateY(0); opacity: 0.45; } 50% { transform: translateY(-5px); opacity: 1; } }
-    @keyframes loadLine { from { transform: scaleX(0.08); } to { transform: scaleX(1); } }
-    @keyframes floatLaptop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    @keyframes floatPhone { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-13px) rotate(-1deg); } }
-    @keyframes orbitFloat { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-10px,0); } }
-    @keyframes cardPulse { 0%, 100% { opacity: 0.72; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-2px); } }
-    @keyframes chipBreathe { 0%, 100% { border-color: rgba(148,163,184,0.18); transform: translateY(0); } 50% { border-color: rgba(34,211,238,0.32); transform: translateY(-2px); } }
+    @keyframes loadLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
-    @media (min-width: 680px) {
-      .section { width: min(100% - 48px, var(--max)); padding: 88px 0; }
-      .nav, .footer-inner, .mobile-menu-inner { width: min(100% - 48px, var(--max)); }
-      .hero-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (min-width: 720px) {
+      .section { width: min(100% - 48px, var(--max)); padding: 92px 0; }
+      .hero-grid { grid-template-columns: minmax(0, 1.02fr) minmax(330px, 0.78fr); }
+      .hero-visual { min-height: 460px; }
+      .hero-card { min-height: 460px; padding: 22px; }
+      .mock-body { padding: 22px; }
+      .mock-hero { min-height: 160px; }
+      .phone-mock { right: 24px; bottom: 28px; width: 138px; min-height: 258px; }
+      .phone-screen { min-height: 238px; }
       .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .project-card.wide { grid-column: span 2; }
-      .project-card.wide { display: grid; grid-template-columns: 1.08fr 0.92fr; }
-      .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .form-row { grid-template-columns: 1fr 1fr; }
-      .contact-panel { grid-template-columns: 1fr auto; align-items: center; padding: 34px; }
+      .project-card.wide { grid-column: span 2; grid-template-columns: 1.15fr 0.85fr; }
+      .project-card.wide .project-visual { min-height: 340px; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .trust-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .about-grid, .contact-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
     }
 
     @media (min-width: 980px) {
-      :root { --header: 72px; }
-      .nav-links { display: flex; }
-      .menu-toggle { display: none; }
-      .desktop-cta { display: inline-flex; }
-      .mobile-menu { display: none; }
-      .hero { padding-top: 28px; }
-      .hero-grid { grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.82fr); gap: 42px; }
-      .hero-visual { min-height: 530px; }
-      .device-stage { height: 530px; }
-      .laptop-device { top: 76px; right: 0; width: 500px; }
-      .phone-device { left: 0; bottom: 26px; width: 205px; }
-      .phone-screen { min-height: 322px; }
-      .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .process-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-      .about-grid { grid-template-columns: 1.1fr 0.9fr; }
-      .contact-panel { padding: 48px; }
-      .contact-device { width: 178px; }
+      .nav-links, .desktop-cta { display: flex; }
+      .menu-toggle, .mobile-menu { display: none; }
+      .services-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .service-card { padding: 20px; }
+      .service-card h3 { font-size: 1.08rem; letter-spacing: -0.04em; }
     }
 
-    @media (max-width: 420px) {
-      .brand span:last-child { font-size: 0.94rem; }
-      .hero { min-height: auto; padding-top: 28px; }
-      .hero h1 { font-size: clamp(2.3rem, 11.5vw, 3.05rem); }
-      .hero-actions .btn, .contact-actions .btn, .project-actions .btn { width: 100%; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      .stat-card { min-height: 78px; padding: 13px; }
-      .hero-visual { min-height: 360px; }
-      .device-stage { height: 360px; }
-      .laptop-device { right: -8px; top: 38px; width: 315px; }
-      .laptop-screen { min-height: 196px; }
-      .dashboard { gap: 9px; padding: 11px; }
-      .dash-panel { min-height: 72px; padding: 10px; }
-      .dash-panel.hero-preview { min-height: 80px; }
-      .phone-device { left: 2px; width: 138px; min-width: 138px; }
-      .phone-screen { min-height: 242px; }
-      .orbit-chip { font-size: 0.68rem; min-height: 27px; padding: 0 9px; }
-      .chip-landing { display: none; }
-      .section { padding: 58px 0; }
-      .project-visual { min-height: 230px; padding: 15px; }
-      .project-mock { height: 210px; }
-      .project-phone { right: 8px; }
-      .contact-panel, .about-panel { padding: 22px; }
+    @media (max-width: 430px) {
+      .section { width: min(100% - 24px, var(--max)); padding: 62px 0; }
+      .hero { padding-top: 20px; }
+      .hero-actions .btn, .cta-actions .btn { width: 100%; }
+      .hero-card { min-height: 350px; padding: 12px; border-radius: 28px; }
+      .mock-grid { gap: 7px; }
+      .mock-grid span { min-height: 58px; }
+      .phone-mock { width: 104px; min-height: 204px; }
+      .phone-screen { min-height: 184px; }
+      .project-visual { padding: 13px; }
+      .project-content, .service-card, .trust-card, .about-panel, .contact-panel { padding: 19px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.001ms !important; }
       .reveal { opacity: 1; transform: none; }
-      .preloader { transition: opacity 180ms ease, visibility 180ms ease; }
-      .device-stage { transform: none !important; }
     }
   </style>
 </head>
 <body class="loading">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Abhii's Studio">
+
+  <div class="preloader" id="preloader" aria-label="Loading Abhi portfolio">
     <div class="loader-card">
-      <div class="loader-devices" aria-hidden="true">
-        <div class="loader-laptop"></div>
-        <div class="loader-phone"></div>
-      </div>
-      <p class="loader-title">Loading Abhii’s Studio</p>
-      <div class="loader-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <h1 class="loader-name">Abhi</h1>
+      <p class="loader-subtitle">Premium web design</p>
       <div class="loader-line" aria-hidden="true"><span></span></div>
     </div>
   </div>
 
   <div class="site-shell">
     <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="Abhii Designs home">
-          <span class="brand-mark">A</span>
-          <span>Abhii Designs</span>
-        </a>
-
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Abhi home"><span class="brand-mark">A</span>Abhi</a>
         <ul class="nav-links">
           <li><a class="nav-link" href="#home">Home</a></li>
           <li><a class="nav-link" href="#work">Work</a></li>
           <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="#process">Process</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-
         <div class="nav-actions">
           <a class="btn btn-small desktop-cta" href="#contact">Start Project</a>
-          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-            <span></span><span></span><span></span>
-          </button>
+          <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
         </div>
       </nav>
       <div class="mobile-menu" id="mobileMenu">
@@ -519,7 +492,7 @@
           <a class="nav-link" href="#home">Home</a>
           <a class="nav-link" href="#work">Work</a>
           <a class="nav-link" href="#services">Services</a>
-          <a class="nav-link" href="#process">Process</a>
+          <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#contact">Contact</a>
           <a class="btn" href="#contact">Start Project</a>
         </div>
@@ -530,68 +503,45 @@
       <section class="section hero" id="home">
         <div class="hero-grid">
           <div class="hero-content reveal">
-            <div class="eyebrow"><span class="status-dot"></span> Available for freelance projects</div>
-            <h1><span class="gradient-text">I build websites that make brands look expensive.</span></h1>
-            <p class="hero-copy">Mobile-first websites, premium landing pages, branding and frontend experiences for businesses that want to stand out online.</p>
+            <p class="eyebrow">Available for selected projects</p>
+            <h1 class="serif">I design clean, high-converting websites for modern businesses.</h1>
+            <p class="hero-copy">I help brands, creators, and local businesses build premium digital presence through websites, branding, and frontend development.</p>
             <div class="hero-actions">
-              <a class="btn" href="#work">See My Work</a>
+              <a class="btn" href="#work">View Work</a>
               <a class="btn btn-secondary" href="#contact">Start a Project</a>
             </div>
-            <div class="trust-row" aria-label="Trust highlights">
+            <div class="trust-row" aria-label="Trust labels">
               <span class="trust-badge">Mobile-first</span>
               <span class="trust-badge">Fast loading</span>
-              <span class="trust-badge">Premium UI</span>
-              <span class="trust-badge">Client-focused</span>
-            </div>
-            <div class="hero-stats" aria-label="Portfolio highlights">
-              <div class="stat-card"><strong>7+</strong><span>Clients</span></div>
-              <div class="stat-card"><strong>9+</strong><span>Projects</span></div>
-              <div class="stat-card"><strong>2+</strong><span>Years</span></div>
-              <div class="stat-card"><strong>100%</strong><span>Responsive</span></div>
+              <span class="trust-badge">Clean UI</span>
+              <span class="trust-badge">Business-focused</span>
             </div>
           </div>
 
-          <div class="hero-visual reveal" id="heroVisual" aria-label="Floating phone and laptop portfolio preview">
-            <div class="device-stage" id="deviceStage">
-              <div class="device-glow" aria-hidden="true"></div>
-              <div class="laptop-device" aria-hidden="true">
-                <div class="laptop-screen">
-                  <div class="window-bar">
-                    <div class="dots"><span></span><span></span><span></span></div>
-                    <div class="url-pill">abhii.online / studio</div>
+          <div class="hero-visual reveal" aria-label="Minimal website preview mockup">
+            <div class="hero-card">
+              <div class="browser-mock" aria-hidden="true">
+                <div class="window-bar">
+                  <div class="dots"><span></span><span></span><span></span></div>
+                  <div class="url-pill">premium-business.website</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-hero">
+                    <span class="mock-line big"></span>
+                    <span class="mock-line mid"></span>
+                    <span class="mock-line short"></span>
                   </div>
-                  <div class="dashboard">
-                    <div class="dash-panel hero-preview">
-                      <div class="dash-line short"></div>
-                      <div class="dash-line mid"></div>
-                      <div class="dash-line tiny"></div>
-                    </div>
-                    <div class="dash-panel dash-grid"><span></span><span></span><span></span></div>
-                    <div class="dash-panel"><div class="dash-meter"></div></div>
-                  </div>
+                  <div class="mock-grid"><span></span><span></span><span></span></div>
                 </div>
               </div>
-
-              <div class="phone-device" aria-hidden="true">
+              <div class="phone-mock" aria-hidden="true">
                 <div class="phone-screen">
-                  <div class="mobile-hero-preview">
-                    <div class="dash-line short"></div>
-                    <div class="dash-line mid"></div>
-                    <div class="mini-button"></div>
-                  </div>
-                  <div class="phone-cards">
-                    <div class="phone-mini-card"><div class="dash-line short"></div><div class="dash-line mid"></div></div>
-                    <div class="phone-mini-card"><div class="dash-line short"></div><div class="dash-line tiny"></div></div>
-                    <div class="phone-mini-card"><div class="dash-line mid"></div></div>
-                  </div>
+                  <div class="phone-block"></div>
+                  <div class="phone-row"></div>
+                  <div class="phone-row"></div>
+                  <div class="phone-row"></div>
                 </div>
               </div>
-
-              <span class="orbit-chip chip-ui">UI</span>
-              <span class="orbit-chip chip-seo">SEO</span>
-              <span class="orbit-chip chip-branding">Branding</span>
-              <span class="orbit-chip chip-react">React</span>
-              <span class="orbit-chip chip-landing">Landing Page</span>
             </div>
           </div>
         </div>
@@ -599,65 +549,53 @@
 
       <section class="section" id="work">
         <p class="section-kicker reveal">Featured Work</p>
-        <h2 class="section-heading reveal">Selected work that speaks before I do.</h2>
-        <p class="section-intro reveal">Premium concepts and builds presented inside device previews, because your future clients will mostly judge your brand from a phone first.</p>
+        <h2 class="section-heading serif reveal">Premium project showcases built to create trust.</h2>
+        <p class="section-intro reveal">Large, quiet, conversion-focused work blocks that show how a business can look more professional on every screen.</p>
         <div class="projects-grid">
           <article class="project-card wide reveal">
             <div class="project-visual">
-              <div class="project-mock" aria-hidden="true">
-                <div class="project-laptop"><div class="project-screen"><div class="window-bar"><div class="dots"><span></span><span></span><span></span></div><div class="url-pill">phonehive.store</div></div><div class="preview-hero"><div class="dash-line short"></div><div class="dash-line mid"></div></div><div class="preview-grid"><span></span><span></span><span></span></div></div></div>
-                <div class="project-phone"><div class="project-phone-screen"><div class="dash-line short"></div><div class="dash-line mid"></div><div class="mini-button"></div></div></div>
-              </div>
+              <div class="project-preview" aria-hidden="true"><div class="preview-inner"><div class="preview-hero"><span class="mock-line big"></span><span class="mock-line mid"></span></div><div class="preview-list"><span></span><span></span><span></span></div></div></div>
             </div>
             <div class="project-content">
               <h3>PhoneHive</h3>
-              <p>Mobile-first website concept for a phone buying and selling business.</p>
-              <div class="tags"><span class="tag">Web Design</span><span class="tag">Mobile-first</span><span class="tag">Branding</span></div>
+              <p>A mobile-first storefront concept for a phone buying and selling business, designed for clarity, trust, and quick customer action.</p>
+              <div class="tags"><span class="tag">Web Design</span><span class="tag">Mobile-first</span><span class="tag">Storefront UI</span></div>
               <div class="project-actions"><a class="btn btn-small" href="#contact">View Project</a><a class="btn btn-small btn-secondary" href="#contact">Case Study</a></div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-visual">
-              <div class="project-mock" aria-hidden="true">
-                <div class="project-laptop"><div class="project-screen"><div class="window-bar"><div class="dots"><span></span><span></span><span></span></div><div class="url-pill">brandveil.studio</div></div><div class="preview-hero"><div class="dash-line short"></div><div class="dash-line mid"></div></div><div class="preview-grid"><span></span><span></span><span></span></div></div></div>
-                <div class="project-phone"><div class="project-phone-screen"><div class="dash-line short"></div><div class="dash-line tiny"></div><div class="mini-button"></div></div></div>
-              </div>
+              <div class="project-preview" aria-hidden="true"><div class="preview-inner"><div class="preview-hero"><span class="mock-line big"></span><span class="mock-line short"></span></div><div class="preview-list"><span></span><span></span></div></div></div>
             </div>
             <div class="project-content">
               <h3>Brandveil Studio</h3>
-              <p>Premium digital identity and creative studio concept.</p>
-              <div class="tags"><span class="tag">Branding</span><span class="tag">Website</span><span class="tag">Visual Design</span></div>
+              <p>A refined digital identity and creative studio concept with premium spacing, calm visuals, and confident messaging.</p>
+              <div class="tags"><span class="tag">Branding</span><span class="tag">Studio Website</span><span class="tag">Visual Design</span></div>
               <div class="project-actions"><a class="btn btn-small" href="#contact">View Project</a><a class="btn btn-small btn-secondary" href="#contact">Case Study</a></div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-visual">
-              <div class="project-mock" aria-hidden="true">
-                <div class="project-laptop"><div class="project-screen"><div class="window-bar"><div class="dots"><span></span><span></span><span></span></div><div class="url-pill">rootinstitute.edu</div></div><div class="preview-hero"><div class="dash-line short"></div><div class="dash-line mid"></div></div><div class="preview-grid"><span></span><span></span><span></span></div></div></div>
-                <div class="project-phone"><div class="project-phone-screen"><div class="dash-line short"></div><div class="dash-line mid"></div><div class="mini-button"></div></div></div>
-              </div>
+              <div class="project-preview" aria-hidden="true"><div class="preview-inner"><div class="preview-hero"><span class="mock-line big"></span><span class="mock-line mid"></span></div><div class="preview-list"><span></span><span></span></div></div></div>
             </div>
             <div class="project-content">
-              <h3>The Root Institute of Education</h3>
-              <p>Clean coaching/institute website with trust-focused design.</p>
-              <div class="tags"><span class="tag">Education</span><span class="tag">Landing Page</span><span class="tag">UI</span></div>
+              <h3>Kerala Beauty</h3>
+              <p>A clean visual web experience for a beauty and lifestyle brand, shaped around elegance, responsive layouts, and premium mood.</p>
+              <div class="tags"><span class="tag">UI Design</span><span class="tag">Frontend</span><span class="tag">Responsive</span></div>
               <div class="project-actions"><a class="btn btn-small" href="#contact">View Project</a><a class="btn btn-small btn-secondary" href="#contact">Case Study</a></div>
             </div>
           </article>
 
           <article class="project-card wide reveal">
             <div class="project-visual">
-              <div class="project-mock" aria-hidden="true">
-                <div class="project-laptop"><div class="project-screen"><div class="window-bar"><div class="dots"><span></span><span></span><span></span></div><div class="url-pill">keralabeauty.in</div></div><div class="preview-hero"><div class="dash-line short"></div><div class="dash-line mid"></div></div><div class="preview-grid"><span></span><span></span><span></span></div></div></div>
-                <div class="project-phone"><div class="project-phone-screen"><div class="dash-line short"></div><div class="dash-line tiny"></div><div class="mini-button"></div></div></div>
-              </div>
+              <div class="project-preview" aria-hidden="true"><div class="preview-inner"><div class="preview-hero"><span class="mock-line big"></span><span class="mock-line mid"></span></div><div class="preview-list"><span></span><span></span><span></span></div></div></div>
             </div>
             <div class="project-content">
-              <h3>Kerala Beauty</h3>
-              <p>Travel/beauty-inspired visual web experience.</p>
-              <div class="tags"><span class="tag">UI Design</span><span class="tag">Frontend</span><span class="tag">Responsive</span></div>
+              <h3>Business Landing Page</h3>
+              <p>A polished landing page placeholder for service businesses that need a strong first impression, clear offer, and simple lead path.</p>
+              <div class="tags"><span class="tag">Landing Page</span><span class="tag">Lead Generation</span><span class="tag">SEO-ready</span></div>
               <div class="project-actions"><a class="btn btn-small" href="#contact">View Project</a><a class="btn btn-small btn-secondary" href="#contact">Case Study</a></div>
             </div>
           </article>
@@ -666,59 +604,70 @@
 
       <section class="section" id="services">
         <p class="section-kicker reveal">Services</p>
-        <h2 class="section-heading reveal">Not just design. Business-ready digital presence.</h2>
-        <p class="section-intro reveal">Every service is shaped around trust, clarity, fast mobile loading, and a premium first impression that helps visitors take action.</p>
+        <h2 class="section-heading serif reveal">Business-ready design, development, and brand polish.</h2>
+        <p class="section-intro reveal">Everything is kept focused: premium visuals, smooth mobile experience, clean structure, and a website that helps visitors trust you faster.</p>
         <div class="services-grid">
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">✦</div><h3>Website Design</h3><p>Premium layouts that make your business look professional, polished, and ready for serious customers.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">⌘</div><h3>Frontend Development</h3><p>Clean, responsive frontend builds with lightweight interactions, semantic HTML, modern CSS, JavaScript, and React.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">↗</div><h3>Landing Pages</h3><p>Focused pages that explain your offer quickly, build confidence, and turn attention into leads.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">◆</div><h3>Branding & Logo Design</h3><p>Logo direction, colors, visual systems, and identity assets that make your brand feel memorable.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">◎</div><h3>SEO-Friendly Structure</h3><p>Readable content hierarchy, metadata, speed-minded code, and search-friendly page foundations.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">▶</div><h3>Visual Content / Video Editing</h3><p>Sharp visuals, reels, edits, and creative assets that support your website, social presence, and campaigns.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">01</div><h3>Website Design</h3><p>Modern, premium layouts that make your business look trustworthy and easy to understand.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">02</div><h3>Frontend Development</h3><p>Responsive HTML, CSS, JavaScript, and React builds with clean code and smooth interactions.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">03</div><h3>Landing Pages</h3><p>Focused pages designed to explain your offer quickly and convert attention into leads.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">04</div><h3>Branding & Logo Design</h3><p>Simple logo direction, colors, and visual systems that make your brand feel more polished.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">05</div><h3>SEO-ready Website Structure</h3><p>Clear headings, metadata, semantic HTML, and speed-minded foundations for better visibility.</p></article>
         </div>
       </section>
 
-      <section class="section" id="process">
-        <p class="section-kicker reveal">Process</p>
-        <h2 class="section-heading reveal">A simple path from idea to premium launch.</h2>
-        <div class="process-grid">
-          <article class="process-card reveal"><h3>Understand</h3><p>I study your business, audience, and goal before touching the design.</p></article>
-          <article class="process-card reveal"><h3>Design</h3><p>I create a clean, premium interface that feels trustworthy and modern.</p></article>
-          <article class="process-card reveal"><h3>Build</h3><p>I develop a fast, responsive, mobile-first website.</p></article>
-          <article class="process-card reveal"><h3>Launch</h3><p>I help you go live with a polished final experience.</p></article>
-          <article class="process-card reveal"><h3>Improve</h3><p>I refine based on feedback, speed, and conversion.</p></article>
+      <section class="section trust-section" id="why">
+        <p class="section-kicker reveal">Why Clients Choose Me</p>
+        <h2 class="section-heading serif reveal">Premium does not need to be loud. It needs to be clear.</h2>
+        <div class="trust-grid">
+          <article class="trust-card reveal"><div class="trust-number">01</div><h3>Mobile-first design</h3><p>Your website is planned for phones first, because most clients will discover you there.</p></article>
+          <article class="trust-card reveal"><div class="trust-number">02</div><h3>Clean and premium UI</h3><p>Refined typography, spacing, and hierarchy help your business feel more high-end.</p></article>
+          <article class="trust-card reveal"><div class="trust-number">03</div><h3>Fast loading websites</h3><p>Lightweight pages, minimal effects, and clean structure keep the experience smooth.</p></article>
+          <article class="trust-card reveal"><div class="trust-number">04</div><h3>Business-focused approach</h3><p>Every section supports trust, clarity, and the next action your visitor should take.</p></article>
+          <article class="trust-card reveal"><div class="trust-number">05</div><h3>Smooth user experience</h3><p>Simple navigation, readable content, and responsive layouts make browsing effortless.</p></article>
+          <article class="trust-card reveal"><div class="trust-number">06</div><h3>Easy communication</h3><p>You get a practical, collaborative process that keeps your project clear from start to finish.</p></article>
         </div>
       </section>
 
       <section class="section" id="about">
-        <p class="section-kicker reveal">About</p>
-        <h2 class="section-heading reveal">Designer taste with frontend execution.</h2>
         <div class="about-grid">
-          <article class="about-panel lead reveal">
-            <h3>I’m Abhii, a web designer and frontend developer who helps businesses look premium online.</h3>
-            <p>I focus on mobile-first design, clean user experience, fast loading, and visuals that make people trust your brand.</p>
-            <p>My goal is simple: help local clients, startups, creators, shops, institutes, and service businesses show up online with confidence instead of looking average.</p>
-          </article>
-          <aside class="about-panel reveal">
-            <h3>Skills & Tools</h3>
+          <div class="about-panel featured reveal">
+            <p class="section-kicker">About</p>
+            <h2 class="section-heading serif">I build digital presence that feels serious and polished.</h2>
+            <p>I’m Abhi, a web designer and frontend developer focused on helping businesses build a strong and premium online presence. I create clean, responsive, and modern websites that make brands look trustworthy and professional.</p>
+          </div>
+          <div class="about-panel reveal">
+            <div class="about-note"><div><strong>01</strong><span>Premium website partner for growing businesses</span></div></div>
+            <h3>Skills & tools</h3>
             <div class="skills-list" aria-label="Skills and tools">
-              <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">GitHub</span><span class="skill-tag">SEO Basics</span><span class="skill-tag">Branding</span><span class="skill-tag">Video Editing</span>
+              <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">GitHub</span><span class="skill-tag">SEO Basics</span><span class="skill-tag">Branding</span>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
       <section class="section" id="contact">
-        <div class="contact-panel reveal">
-          <div class="contact-copy">
+        <div class="cta-panel reveal">
+          <h2 class="section-heading serif">Your business deserves a website that builds trust.</h2>
+          <p>If you want a premium website that looks professional and works beautifully on phones, let’s build it.</p>
+          <div class="cta-actions">
+            <a class="btn" href="#contactForm">Start Project</a>
+            <a class="btn btn-secondary" href="https://wa.me/?text=Hi%20Abhi%2C%20I%20want%20to%20start%20a%20website%20project." target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Project contact form">
+        <div class="contact-grid">
+          <div class="contact-panel reveal">
             <p class="section-kicker">Contact</p>
-            <h2 class="section-heading">Your brand should not look average.</h2>
-            <p>If you want a website that feels premium, loads fast, and works beautifully on phones, let’s build it.</p>
+            <h2 class="section-heading serif">Tell me what you want to build.</h2>
+            <p>Share your project type, business goal, timeline, and any reference websites you like. I’ll reply with the next steps.</p>
             <div class="contact-actions">
-              <a class="btn" href="mailto:contact@abhii.online">Start a Project</a>
-              <a class="btn btn-secondary" href="mailto:contact@abhii.online">WhatsApp Me</a>
+              <a class="btn btn-secondary" href="mailto:contact@abhii.online">Email Me</a>
               <a class="btn btn-secondary" href="https://www.instagram.com/ft.abh1i/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
+          </div>
+          <div class="contact-panel reveal">
             <form class="contact-form" id="contactForm">
               <div class="form-row">
                 <input class="contact-input" type="text" name="name" placeholder="Your name" autocomplete="name" required />
@@ -730,21 +679,13 @@
               <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
           </div>
-          <div class="contact-device" aria-hidden="true">
-            <div class="contact-screen">
-              <span>Status</span>
-              <strong>Project Started</strong>
-              <div class="mini-button" style="margin-inline:auto"></div>
-              <span>Let’s Build</span>
-            </div>
-          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer-inner">
-        <span>© <span id="year"></span> Abhii Designs. Premium websites for modern businesses.</span>
+        <span>© <span id="year"></span> Abhi. Premium websites for modern businesses.</span>
         <div class="footer-links">
           <a href="https://www.instagram.com/ft.abh1i/" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.linkedin.com/in/abh1i/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -764,7 +705,7 @@
       preloader.classList.add('is-hidden');
     }
 
-    const loadDelay = prefersReducedMotion ? 450 : 2450;
+    const loadDelay = prefersReducedMotion ? 250 : 1650;
     const minimumLoad = new Promise((resolve) => setTimeout(resolve, loadDelay));
     const pageReady = new Promise((resolve) => {
       if (document.readyState === 'complete') resolve();
@@ -800,33 +741,14 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -42px 0px' });
+      }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
 
       document.querySelectorAll('.reveal').forEach((el, index) => {
-        el.style.transitionDelay = `${Math.min(index % 6, 5) * 55}ms`;
+        el.style.transitionDelay = `${Math.min(index % 5, 4) * 45}ms`;
         observer.observe(el);
       });
     } else {
       document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
-    }
-
-    const heroVisual = document.getElementById('heroVisual');
-    const deviceStage = document.getElementById('deviceStage');
-    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-    if (!prefersReducedMotion && canHover) {
-      heroVisual.addEventListener('pointermove', (event) => {
-        const rect = heroVisual.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-        deviceStage.style.setProperty('--tilt-y', `${x * 5}deg`);
-        deviceStage.style.setProperty('--tilt-x', `${y * -4}deg`);
-      });
-
-      heroVisual.addEventListener('pointerleave', () => {
-        deviceStage.style.setProperty('--tilt-y', '0deg');
-        deviceStage.style.setProperty('--tilt-x', '0deg');
-      });
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
