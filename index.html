@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Abhi is a web designer and frontend developer creating premium, mobile-first, high-converting websites for modern businesses, brands, creators, and local companies." />
+  <meta name="description" content="Abhii is a web designer, web developer, and full-stack developer building clean, modern, responsive, and business-focused websites for businesses and brands." />
   <meta name="theme-color" content="#f7f2e8" />
-  <title>Abhi — Premium Web Designer & Frontend Developer</title>
+  <title>Abhii — Web Designer & Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" />
@@ -294,6 +294,7 @@
     .project-content h3, .service-card h3, .trust-card h3 { margin-bottom: 8px; font-size: 1.32rem; }
     .project-content p, .service-card p, .trust-card p, .about-panel p, .cta-panel p, .contact-panel p { color: var(--muted); }
     .tags, .skills-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 18px; }
+    .trust-card .skills-list { margin-bottom: 0; }
 
     .services-grid { grid-template-columns: 1fr; }
     .service-card, .trust-card { padding: 22px; transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
@@ -375,6 +376,7 @@
       .project-card.wide .project-visual { min-height: 340px; }
       .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .trust-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .about-grid, .contact-grid { grid-template-columns: 1fr 1fr; }
       .form-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
@@ -383,7 +385,7 @@
     @media (min-width: 980px) {
       .nav-links, .desktop-cta { display: flex; }
       .menu-toggle, .mobile-menu { display: none; }
-      .services-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .service-card { padding: 20px; }
       .service-card h3 { font-size: 1.08rem; letter-spacing: -0.04em; }
     }
@@ -408,10 +410,10 @@
 <body class="loading">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="preloader" id="preloader" aria-label="Loading Abhi portfolio">
+  <div class="preloader" id="preloader" aria-label="Loading Abhii portfolio">
     <div class="loader-card">
-      <h1 class="loader-name">Abhi</h1>
-      <p class="loader-subtitle">Premium web design</p>
+      <h1 class="loader-name">Abhii</h1>
+      <p class="loader-subtitle">Web design & full-stack development</p>
       <div class="loader-line" aria-hidden="true"><span></span></div>
     </div>
   </div>
@@ -424,6 +426,7 @@
           <li><a class="nav-link" href="#home">Home</a></li>
           <li><a class="nav-link" href="#work">Work</a></li>
           <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -437,6 +440,7 @@
           <a class="nav-link" href="#home">Home</a>
           <a class="nav-link" href="#work">Work</a>
           <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#contact">Contact</a>
           <a class="btn" href="#contact">Start Project</a>
@@ -449,17 +453,17 @@
         <div class="hero-grid">
           <div class="hero-content reveal">
             <p class="eyebrow">Available for selected projects</p>
-            <h1 class="serif">I design clean, high-converting websites for modern businesses.</h1>
-            <p class="hero-copy">I help brands, creators, and local businesses build premium digital presence through websites, branding, and frontend development.</p>
+            <h1 class="serif">I design and build modern websites that feel premium and perform fast.</h1>
+            <p class="hero-copy">I’m a web designer and full-stack developer focused on creating clean interfaces, smooth user experiences, and reliable web applications for businesses and brands.</p>
             <div class="hero-actions">
               <a class="btn" href="#work">View Work</a>
               <a class="btn btn-secondary" href="#contact">Start a Project</a>
             </div>
             <div class="trust-row" aria-label="Trust labels">
-              <span class="trust-badge">Mobile-first</span>
-              <span class="trust-badge">Fast loading</span>
-              <span class="trust-badge">Clean UI</span>
-              <span class="trust-badge">Business-focused</span>
+              <span class="trust-badge">Web Design</span>
+              <span class="trust-badge">Full-Stack Development</span>
+              <span class="trust-badge">Responsive UI</span>
+              <span class="trust-badge">Fast Performance</span>
             </div>
           </div>
         </div>
@@ -467,8 +471,8 @@
 
       <section class="section" id="work">
         <p class="section-kicker reveal">Featured Work</p>
-        <h2 class="section-heading serif reveal">Premium project showcases built to create trust.</h2>
-        <p class="section-intro reveal">Large, quiet, conversion-focused work blocks that show how a business can look more professional on every screen.</p>
+        <h2 class="section-heading serif reveal">Featured projects with clean, premium execution.</h2>
+        <p class="section-intro reveal">A focused look at the kind of responsive, business-ready website experience I design and build.</p>
         <div class="projects-grid">
           <article class="project-card wide featured-project reveal">
             <div class="project-visual">
@@ -489,8 +493,8 @@
             </div>
             <div class="project-content">
               <h3>Kerala Beauty</h3>
-              <p>A premium skincare brand website with elegant UI and seamless shopping experience.</p>
-              <div class="tags"><span class="tag">UI Design</span><span class="tag">Responsive</span><span class="tag">Frontend</span></div>
+              <p>A premium skincare brand website concept with elegant UI, responsive layout, and smooth frontend experience.</p>
+              <div class="tags"><span class="tag">UI Design</span><span class="tag">Frontend</span><span class="tag">Responsive</span></div>
               <div class="project-actions"><a class="btn btn-small" href="#contact">View Project</a></div>
             </div>
           </article>
@@ -499,27 +503,26 @@
 
       <section class="section" id="services">
         <p class="section-kicker reveal">Services</p>
-        <h2 class="section-heading serif reveal">Business-ready design, development, and brand polish.</h2>
-        <p class="section-intro reveal">Everything is kept focused: premium visuals, smooth mobile experience, clean structure, and a website that helps visitors trust you faster.</p>
+        <h2 class="section-heading serif reveal">What I can build</h2>
+        <p class="section-intro reveal">I combine design, frontend, and backend development to create complete web experiences from idea to launch.</p>
         <div class="services-grid">
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">01</div><h3>Website Design</h3><p>Modern, premium layouts that make your business look trustworthy and easy to understand.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">02</div><h3>Frontend Development</h3><p>Responsive HTML, CSS, JavaScript, and React builds with clean code and smooth interactions.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">03</div><h3>Landing Pages</h3><p>Focused pages designed to explain your offer quickly and convert attention into leads.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">04</div><h3>Branding & Logo Design</h3><p>Simple logo direction, colors, and visual systems that make your brand feel more polished.</p></article>
-          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">05</div><h3>SEO-ready Website Structure</h3><p>Clear headings, metadata, semantic HTML, and speed-minded foundations for better visibility.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">01</div><h3>Web Design</h3><p>Clean, modern, and user-friendly website designs that make brands look professional and trustworthy.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">02</div><h3>Frontend Development</h3><p>Responsive interfaces built with modern frontend technologies, smooth interactions, and strong attention to detail.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">03</div><h3>Backend Development</h3><p>Reliable backend systems for authentication, databases, APIs, dashboards, and dynamic website features.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">04</div><h3>Full-Stack Websites</h3><p>Complete web applications built from frontend to backend with clean structure, good performance, and scalable logic.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">05</div><h3>Landing Pages</h3><p>High-converting landing pages designed to present offers clearly and turn visitors into clients.</p></article>
+          <article class="service-card reveal"><div class="service-icon" aria-hidden="true">06</div><h3>Website Redesign</h3><p>Modern redesigns that improve layout, user experience, speed, responsiveness, and overall brand trust.</p></article>
         </div>
       </section>
 
-      <section class="section trust-section" id="why">
-        <p class="section-kicker reveal">Why Clients Choose Me</p>
-        <h2 class="section-heading serif reveal">Premium does not need to be loud. It needs to be clear.</h2>
-        <div class="trust-grid">
-          <article class="trust-card reveal"><div class="trust-number">01</div><h3>Mobile-first design</h3><p>Your website is planned for phones first, because most clients will discover you there.</p></article>
-          <article class="trust-card reveal"><div class="trust-number">02</div><h3>Clean and premium UI</h3><p>Refined typography, spacing, and hierarchy help your business feel more high-end.</p></article>
-          <article class="trust-card reveal"><div class="trust-number">03</div><h3>Fast loading websites</h3><p>Lightweight pages, minimal effects, and clean structure keep the experience smooth.</p></article>
-          <article class="trust-card reveal"><div class="trust-number">04</div><h3>Business-focused approach</h3><p>Every section supports trust, clarity, and the next action your visitor should take.</p></article>
-          <article class="trust-card reveal"><div class="trust-number">05</div><h3>Smooth user experience</h3><p>Simple navigation, readable content, and responsive layouts make browsing effortless.</p></article>
-          <article class="trust-card reveal"><div class="trust-number">06</div><h3>Easy communication</h3><p>You get a practical, collaborative process that keeps your project clear from start to finish.</p></article>
+      <section class="section trust-section" id="skills">
+        <p class="section-kicker reveal">Skills</p>
+        <h2 class="section-heading serif reveal">Skills &amp; technologies</h2>
+        <div class="trust-grid skills-grid">
+          <article class="trust-card reveal"><div class="trust-number">01</div><h3>Frontend</h3><div class="skills-list" aria-label="Frontend skills"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Responsive Design</span><span class="skill-tag">UI/UX Design</span><span class="skill-tag">Framer Motion</span></div></article>
+          <article class="trust-card reveal"><div class="trust-number">02</div><h3>Backend</h3><div class="skills-list" aria-label="Backend skills"><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Firebase</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Authentication</span><span class="skill-tag">Database Design</span><span class="skill-tag">Server-side Logic</span></div></article>
+          <article class="trust-card reveal"><div class="trust-number">03</div><h3>Tools</h3><div class="skills-list" aria-label="Tools"><span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">Vercel</span><span class="skill-tag">Netlify</span><span class="skill-tag">Firebase Console</span></div></article>
+          <article class="trust-card reveal"><div class="trust-number">04</div><h3>Professional</h3><div class="skills-list" aria-label="Professional skills"><span class="skill-tag">Mobile-first thinking</span><span class="skill-tag">Clean code</span><span class="skill-tag">Problem solving</span><span class="skill-tag">Performance optimization</span><span class="skill-tag">Client communication</span><span class="skill-tag">Business-focused design</span></div></article>
         </div>
       </section>
 
@@ -527,26 +530,25 @@
         <div class="about-grid">
           <div class="about-panel featured reveal">
             <p class="section-kicker">About</p>
-            <h2 class="section-heading serif">I build digital presence that feels serious and polished.</h2>
-            <p>I’m Abhi, a web designer and frontend developer focused on helping businesses build a strong and premium online presence. I create clean, responsive, and modern websites that make brands look trustworthy and professional.</p>
+            <h2 class="section-heading serif">Designer mindset. Developer execution.</h2>
+            <p>I’m Abhii, a web designer and full-stack developer who builds clean, responsive, and modern websites. I focus on creating digital experiences that look premium, work smoothly on all devices, and help businesses build trust online.</p>
+            <p>My work combines strong visual design, frontend development, backend logic, and performance-focused execution — so every website feels polished from the first click to the final interaction.</p>
           </div>
           <div class="about-panel reveal">
-            <div class="about-note"><div><strong>01</strong><span>Premium website partner for growing businesses</span></div></div>
-            <h3>Skills & tools</h3>
-            <div class="skills-list" aria-label="Skills and tools">
-              <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">GitHub</span><span class="skill-tag">SEO Basics</span><span class="skill-tag">Branding</span>
-            </div>
+            <div class="about-note"><div><strong>01</strong><span>Complete website partner for growing businesses</span></div></div>
+            <h3>How I work</h3>
+            <p>I keep every project clean, spacious, responsive, and focused on the business goal behind the website.</p>
           </div>
         </div>
       </section>
 
       <section class="section" id="contact">
         <div class="cta-panel reveal">
-          <h2 class="section-heading serif">Your business deserves a website that builds trust.</h2>
-          <p>If you want a premium website that looks professional and works beautifully on phones, let’s build it.</p>
+          <h2 class="section-heading serif">Need a website that looks premium and works smoothly?</h2>
+          <p>I can help you design, build, and launch a modern website or full-stack web experience that fits your brand and business goal.</p>
           <div class="cta-actions">
             <a class="btn" href="#contactForm">Start Project</a>
-            <a class="btn btn-secondary" href="https://wa.me/?text=Hi%20Abhi%2C%20I%20want%20to%20start%20a%20website%20project." target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+            <a class="btn btn-secondary" href="https://wa.me/?text=Hi%20Abhii%2C%20I%20want%20to%20start%20a%20website%20project." target="_blank" rel="noopener noreferrer">Contact Me</a>
           </div>
         </div>
       </section>
@@ -580,7 +582,7 @@
 
     <footer class="footer">
       <div class="footer-inner">
-        <span>© <span id="year"></span> Abhi. Premium websites for modern businesses.</span>
+        <span>© <span id="year"></span> Abhii. Premium web design and full-stack development.</span>
         <div class="footer-links">
           <a href="https://www.instagram.com/ft.abh1i/" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.linkedin.com/in/abh1i/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
