@@ -36,7 +36,11 @@
       --header: 72px;
     }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-tap-highlight-color: transparent; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus:not(:focus-visible), a:focus:not(:focus-visible) { outline: none; }
+    button:focus-visible, a:focus-visible { outline: 3px solid rgba(201, 169, 104, 0.42); outline-offset: 3px; }
 
     body {
       margin: 0;
@@ -86,7 +90,7 @@
       font-weight: 800;
       text-decoration: none;
     }
-    .skip-link:focus { transform: none; }
+    .skip-link:focus, .skip-link:focus-visible { transform: none; }
 
     .preloader {
       position: fixed;
@@ -99,7 +103,7 @@
       transition: opacity 520ms ease, transform 520ms ease, visibility 520ms ease;
     }
     .preloader.is-hidden { opacity: 0; transform: translateY(-8px); visibility: hidden; pointer-events: none; }
-    .loader-card { width: min(100%, 320px); text-align: center; }
+    .loader-card { width: min(100%, 440px); text-align: center; }
     .loader-name {
       margin: 0 0 14px;
       font-family: "Playfair Display", Georgia, serif;
@@ -206,8 +210,9 @@
       transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
     }
     .btn:hover, .btn:focus-visible { transform: translateY(-2px); background: var(--navy-2); box-shadow: 0 20px 44px rgba(15, 42, 69, 0.20); }
+    .btn:active { background: var(--navy); color: white; box-shadow: 0 12px 24px rgba(15, 42, 69, 0.14); }
     .btn-secondary { background: rgba(255, 250, 241, 0.74); border-color: rgba(15, 42, 69, 0.18); box-shadow: none; color: var(--navy); }
-    .btn-secondary:hover, .btn-secondary:focus-visible { background: white; }
+    .btn-secondary:hover, .btn-secondary:focus-visible, .btn-secondary:active { background: white; color: var(--navy); }
     .btn-small { min-height: 40px; padding: 0 15px; font-size: 0.82rem; }
     .desktop-cta { display: none; }
 
@@ -290,8 +295,8 @@
       opacity: 0.86;
       transition: opacity 220ms ease, transform 220ms ease;
     }
-    .project-card:hover::before, .project-card:focus-within::before { opacity: 1; transform: scale(1.02); }
-    .project-card:active { transform: translateY(-1px) scale(0.995); }
+    .project-card:hover::before, .project-card:focus-within::before { opacity: 1; }
+    .project-card:active { transform: translateY(-1px); }
     .project-topline {
       display: flex;
       align-items: center;
@@ -324,6 +329,7 @@
       border-radius: 50%;
       background: #4c8f65;
       box-shadow: 0 0 0 4px rgba(76, 143, 101, 0.12);
+      animation: statusPulse 1.8s ease-in-out infinite;
     }
     .project-content { display: flex; flex: 1; flex-direction: column; }
     .project-content h3 { margin-bottom: 10px; font-size: 1.46rem; }
@@ -333,7 +339,8 @@
     .tags, .skills-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 18px; }
     .project-content .tags { margin-top: auto; }
     .project-actions { margin-top: 4px; }
-    .project-actions .btn { width: 100%; }
+    .project-actions .btn { width: auto; }
+    .live-preview-btn { min-height: 38px; padding: 0 14px; border-color: rgba(15, 42, 69, 0.88); background: linear-gradient(135deg, var(--navy), var(--navy-2)); box-shadow: 0 12px 28px rgba(15, 42, 69, 0.14); }
     .trust-card .skills-list { margin-bottom: 0; }
 
     .services-grid { grid-template-columns: 1fr; }
@@ -407,6 +414,7 @@
     .reveal.visible { opacity: 1; transform: none; }
 
     @keyframes loadLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes statusPulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(76, 143, 101, 0.12); } 50% { box-shadow: 0 0 0 7px rgba(76, 143, 101, 0.05); } }
     @keyframes spin { to { transform: rotate(360deg); } }
 
     @media (min-width: 720px) {
@@ -434,7 +442,6 @@
       .hero { padding-top: 20px; }
       .hero-actions .btn, .cta-actions .btn { width: 100%; }
       .project-card, .service-card, .trust-card, .about-panel, .contact-panel { padding: 19px; }
-      .project-actions .btn { width: 100%; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -448,7 +455,7 @@
 
   <div class="preloader" id="preloader" aria-label="Loading Abhii portfolio">
     <div class="loader-card">
-      <h1 class="loader-name">Abhii</h1>
+      <h1 class="loader-name">Abhii Designs</h1>
       <p class="loader-subtitle">Web design & full-stack development</p>
       <div class="loader-line" aria-hidden="true"><span></span></div>
     </div>
@@ -513,26 +520,26 @@
           <article class="project-card reveal">
             <div class="project-topline" aria-hidden="true">
               <span class="project-index">01</span>
-              <span class="project-status">Live</span>
+              <span class="project-status">Live Project</span>
             </div>
             <div class="project-content">
-              <h3>Kerala Beauty</h3>
-              <p>A premium, elegant beauty brand website with clean visuals, modern layout, and mobile-first design.</p>
-              <div class="tags"><span class="tag">Beauty / Salon Website</span></div>
-              <div class="project-actions"><a class="btn btn-small" href="https://kerala-beauty.vercel.app" target="_blank" rel="noopener noreferrer">Live Preview</a></div>
+              <h3>The Root Institution</h3>
+              <p>A professional coaching/institution website designed for students and parents, with clear sections, trust-focused layout, and responsive design.</p>
+              <div class="tags"><span class="tag">Educational Institution Website</span></div>
+              <div class="project-actions"><a class="btn btn-small live-preview-btn" href="https://theroot-institution.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open The Root Institution live preview in a new tab">Live Preview</a></div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-topline" aria-hidden="true">
               <span class="project-index">02</span>
-              <span class="project-status">Live</span>
+              <span class="project-status">Online</span>
             </div>
             <div class="project-content">
-              <h3>The Root Institution</h3>
-              <p>A professional coaching/institution website designed for students and parents, with clear sections, trust-focused layout, and responsive design.</p>
-              <div class="tags"><span class="tag">Educational Institution Website</span></div>
-              <div class="project-actions"><a class="btn btn-small" href="https://theroot-institution.vercel.app" target="_blank" rel="noopener noreferrer">Live Preview</a></div>
+              <h3>Kerala Beauty</h3>
+              <p>A clean and modern website that highlights top destinations in Kerala with a smooth, mobile-first browsing experience.</p>
+              <div class="tags"><span class="tag">Kerala Travel Website</span></div>
+              <div class="project-actions"><a class="btn btn-small live-preview-btn" href="https://kerala-beauty.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Kerala Beauty live preview in a new tab">Live Preview</a></div>
             </div>
           </article>
         </div>
