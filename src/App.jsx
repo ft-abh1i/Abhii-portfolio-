@@ -7,66 +7,54 @@ const projects = [
     id: '01',
     title: 'Bliptwit',
     type: 'Secure Chat Concept',
-    description: 'A privacy-first social chat concept with clean UI, secure messaging ideas, and modern product-style interactions.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1400&auto=format&fit=crop',
+    description: 'Privacy-first chat concept with clean UI, secure messaging ideas, and modern product-style interactions.',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop',
     link: 'https://bliptwit.vercel.app',
   },
   {
     id: '02',
     title: 'Herbivya',
     type: 'Brand Website',
-    description: 'A premium nature-inspired website direction built around trust, calm visuals, brand presence, and mobile-first storytelling.',
-    image: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1400&auto=format&fit=crop',
+    description: 'Nature-inspired premium website direction built around trust, calm visuals, and mobile-first storytelling.',
+    image: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1200&auto=format&fit=crop',
     link: '#contact',
   },
   {
     id: '03',
     title: 'The Root Institution',
     type: 'Coaching Website',
-    description: 'A professional education website for students and parents with trust-focused sections, clear content, and responsive execution.',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400&auto=format&fit=crop',
+    description: 'Professional education website for students and parents with clear content and responsive execution.',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
     link: 'https://theroot-institution.vercel.app',
   },
   {
     id: '04',
     title: 'Visit Kerala',
     type: 'Travel Experience',
-    description: 'A visual tourism website experience showing Kerala destinations with smooth browsing, strong imagery, and simple navigation.',
-    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1400&auto=format&fit=crop',
+    description: 'Visual tourism website showing Kerala destinations with smooth browsing and strong imagery.',
+    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1200&auto=format&fit=crop',
     link: 'https://kerala-beauty.vercel.app',
   },
 ];
 
 const services = ['Website Design', 'Full Stack Development', 'App UI Design', 'Branding & SEO'];
-
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-const photoStops = projects.map((_, index) => (index + 0.5) / projects.length);
+const smooth = (value) => value * value * (3 - 2 * value);
 
 export default function App() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const activeProject = useMemo(() => projects[activeIndex], [activeIndex]);
 
   useEffect(() => {
     const section = document.querySelector('.corridor-section');
     if (!section) return undefined;
 
     let frameId = 0;
-
     const updateScene = () => {
       cancelAnimationFrame(frameId);
       frameId = requestAnimationFrame(() => {
         const rect = section.getBoundingClientRect();
-        const totalScroll = section.offsetHeight - window.innerHeight;
-        const rawProgress = totalScroll > 0 ? clamp(-rect.top / totalScroll, 0, 1) : 0;
-        const nearestIndex = photoStops.reduce((closest, stop, index) => {
-          const currentDistance = Math.abs(rawProgress - stop);
-          const closestDistance = Math.abs(rawProgress - photoStops[closest]);
-          return currentDistance < closestDistance ? index : closest;
-        }, 0);
-
-        setProgress(rawProgress);
-        setActiveIndex(nearestIndex);
+        const total = section.offsetHeight - window.innerHeight;
+        setProgress(total > 0 ? clamp(-rect.top / total, 0, 1) : 0);
       });
     };
 
@@ -81,8 +69,17 @@ export default function App() {
     };
   }, []);
 
+  const activeIndex = useMemo(() => {
+    const stops = projects.map((_, index) => (index + 0.5) / projects.length);
+    return stops.reduce((closest, stop, index) => (
+      Math.abs(progress - stop) < Math.abs(progress - stops[closest]) ? index : closest
+    ), 0);
+  }, [progress]);
+
+  const activeProject = projects[activeIndex];
+
   return (
-    <div className="portfolio-page">
+    <div className="portfolio-page exact-portfolio">
       <header className="topbar">
         <a href="#home" className="brand">Abhii Designs</a>
         <nav aria-label="Main navigation">
@@ -94,89 +91,81 @@ export default function App() {
 
       <main>
         <section className="hero-section" id="home">
-          <p className="eyebrow">Web Designer & Full Stack Developer in India</p>
-          <h1>Scroll through my work like a cinematic project corridor.</h1>
-          <p>One page. One character. A room with project photos on both walls. Scroll forward, the nearest photo zooms in, then zooms out as the character moves ahead.</p>
+          <p className="eyebrow">Interactive One Page Portfolio</p>
+          <h1>A running character inside a project room.</h1>
+          <p>Scroll karo. Character room mein aage badhega. Wall ki photo paas aate hi zoom hogi, details dikhenge, phir zoom out hoke next photo par jayega.</p>
           <div className="hero-actions">
             <a href="#work" className="primary-btn">Enter Room</a>
             <a href="#contact" className="ghost-btn">Start Project</a>
           </div>
         </section>
 
-        <section className="corridor-section" id="work" aria-label="Scroll project corridor">
-          <div className="sticky-scene" style={{ '--scene-progress': progress }}>
-            <div className="scene-vignette" />
-            <div className="light-beam light-left" />
-            <div className="light-beam light-right" />
-            <div className="depth-lines" aria-hidden="true" />
+        <section className="corridor-section exact-corridor" id="work" aria-label="Running character project corridor">
+          <div className="exact-stage" style={{ '--scroll': progress }}>
+            <div className="room-backdrop" />
+            <div className="room-wall room-wall-left" />
+            <div className="room-wall room-wall-right" />
+            <div className="room-floor" />
+            <div className="room-depth-lines" />
 
-            <div className="room" style={{ transform: `translateZ(${progress * 90}px) rotateX(${progress * 1.1}deg)` }}>
-              <div className="ceiling" />
-              <div className="wall left-wall" />
-              <div className="wall right-wall" />
-              <div className="floor" />
-              <div className="center-road" />
-
-              <div className="gallery-markers" aria-hidden="true">
-                {projects.map((project, index) => (
-                  <span key={project.id} className={index === activeIndex ? 'marker active' : 'marker'} />
-                ))}
-              </div>
-
-              <div className="character" style={{ transform: `translateX(-50%) translateY(${-progress * 96 + Math.sin(progress * 110) * 5}px) scale(${1 - progress * 0.12})` }} aria-hidden="true">
-                <span className="character-shadow" />
-                <span className="character-head" />
-                <span className="character-body" />
-                <span className="character-arm arm-left" />
-                <span className="character-arm arm-right" />
-                <span className="character-legs" />
-              </div>
-
-              {projects.map((project, index) => {
-                const stop = photoStops[index];
-                const distance = Math.abs(progress - stop);
-                const proximity = clamp(1 - distance * projects.length * 2.35, 0, 1);
-                const smoothZoom = proximity * proximity * (3 - 2 * proximity);
-                const side = index % 2 === 0 ? 'left' : 'right';
-                const isFocused = smoothZoom > 0.5;
-                const wallX = side === 'left' ? 27 : 73;
-                const activeX = 50;
-                const left = wallX + (activeX - wallX) * smoothZoom;
-                const scale = 0.5 + smoothZoom * 0.55;
-                const depth = -240 + smoothZoom * 240;
-                const rotate = side === 'left' ? 14 - smoothZoom * 14 : -14 + smoothZoom * 14;
-
-                return (
-                  <article
-                    className={`project-frame ${side} ${isFocused ? 'active' : ''}`}
-                    key={project.id}
-                    style={{
-                      '--local': smoothZoom,
-                      left: `${left}%`,
-                      opacity: 0.18 + smoothZoom * 0.82,
-                      filter: `blur(${(1 - smoothZoom) * 4}px)`,
-                      transform: `translate(-50%, -50%) translateZ(${depth}px) scale(${scale}) rotateY(${rotate}deg)`,
-                    }}
-                  >
-                    <div className="frame-ring" />
-                    <img src={project.image} alt={`${project.title} preview`} />
-                    <div className="project-content">
-                      <span>{project.id} / {project.type}</span>
-                      <h2>{project.title}</h2>
-                      <p>{project.description}</p>
-                      <a href={project.link} target={project.link.startsWith('http') ? '_blank' : undefined} rel="noreferrer">Live Preview</a>
-                    </div>
-                  </article>
-                );
-              })}
+            <div
+              className="runner"
+              style={{ '--run': progress }}
+              aria-hidden="true"
+            >
+              <span className="runner-shadow" />
+              <span className="runner-head" />
+              <span className="runner-body" />
+              <span className="runner-arm runner-arm-left" />
+              <span className="runner-arm runner-arm-right" />
+              <span className="runner-leg runner-leg-left" />
+              <span className="runner-leg runner-leg-right" />
             </div>
 
-            <div className="scene-status">
-              <span>Nearest photo</span>
+            {projects.map((project, index) => {
+              const stop = (index + 0.5) / projects.length;
+              const distance = Math.abs(progress - stop);
+              const rawFocus = clamp(1 - distance * projects.length * 2.15, 0, 1);
+              const focus = smooth(rawFocus);
+              const side = index % 2 === 0 ? 'left' : 'right';
+              const isFocused = focus > 0.46;
+              const wallX = side === 'left' ? 18 : 82;
+              const centerX = 50;
+              const x = wallX + (centerX - wallX) * focus;
+              const y = 28 + index * 7 - focus * 2;
+              const scale = 0.58 + focus * 0.55;
+              const rotate = side === 'left' ? -13 + focus * 13 : 13 - focus * 13;
+
+              return (
+                <article
+                  key={project.id}
+                  className={`wall-photo wall-photo-${side} ${isFocused ? 'is-focused' : ''}`}
+                  style={{
+                    '--focus': focus,
+                    left: `${x}%`,
+                    top: `${y}%`,
+                    opacity: 0.36 + focus * 0.64,
+                    transform: `translate(-50%, -50%) scale(${scale}) rotateY(${rotate}deg)`,
+                    zIndex: isFocused ? 30 : 10 + index,
+                  }}
+                >
+                  <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+                  <div className="photo-details">
+                    <span>{project.id} / {project.type}</span>
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
+                    <a href={project.link} target={project.link.startsWith('http') ? '_blank' : undefined} rel="noreferrer">Live Preview</a>
+                  </div>
+                </article>
+              );
+            })}
+
+            <div className="room-caption">
+              <span>Now viewing</span>
               <strong>{activeProject.title}</strong>
             </div>
 
-            <div className="scroll-meter" aria-hidden="true">
+            <div className="room-progress" aria-hidden="true">
               <span style={{ transform: `scaleX(${progress})` }} />
             </div>
           </div>
