@@ -1,4 +1,3 @@
-import { useEffect, useMemo, useState } from 'react';
 import './corridor.css';
 import './gameworld.css';
 
@@ -10,40 +9,8 @@ const projects = [
 ];
 
 const services = ['Website Design', 'Full Stack Development', 'App UI Design', 'Branding & SEO'];
-const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-const smooth = (value) => value * value * (3 - 2 * value);
-const projectStops = projects.map((_, index) => (index + 0.5) / projects.length);
 
 export default function App() {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const section = document.querySelector('.corridor-section');
-    if (!section) return undefined;
-    let frameId = 0;
-    const updateScene = () => {
-      cancelAnimationFrame(frameId);
-      frameId = requestAnimationFrame(() => {
-        const rect = section.getBoundingClientRect();
-        const total = section.offsetHeight - window.innerHeight;
-        setProgress(total > 0 ? clamp(-rect.top / total, 0, 1) : 0);
-      });
-    };
-    updateScene();
-    window.addEventListener('scroll', updateScene, { passive: true });
-    window.addEventListener('resize', updateScene);
-    return () => {
-      cancelAnimationFrame(frameId);
-      window.removeEventListener('scroll', updateScene);
-      window.removeEventListener('resize', updateScene);
-    };
-  }, []);
-
-  const activeIndex = useMemo(() => projectStops.reduce((closest, stop, index) => (
-    Math.abs(progress - stop) < Math.abs(progress - projectStops[closest]) ? index : closest
-  ), 0), [progress]);
-  const activeProject = projects[activeIndex];
-
   return (
     <div className="portfolio-page exact-portfolio">
       <header className="topbar">
@@ -52,42 +19,27 @@ export default function App() {
       </header>
       <main>
         <section className="hero-section" id="home">
-          <p className="eyebrow">Interactive One Page Portfolio</p>
-          <h1>A running character inside a project room.</h1>
-          <p>Scroll karo. Character center mein run karega, room peeche move karega, aur wall photos pass aate hi zoom hoke details dikhayengi.</p>
-          <div className="hero-actions"><a href="#work" className="primary-btn">Enter Room</a><a href="#contact" className="ghost-btn">Start Project</a></div>
+          <p className="eyebrow">Web Designer & Full Stack Developer</p>
+          <h1>I design and build websites for businesses.</h1>
+          <p>Modern, mobile-first websites with clean UI, smooth experience, and launch-ready development.</p>
+          <div className="hero-actions"><a href="#work" className="primary-btn">View Work</a><a href="#contact" className="ghost-btn">Start Project</a></div>
         </section>
 
-        <section className="corridor-section exact-corridor" id="work" aria-label="Running character project corridor">
-          <div className="exact-stage" style={{ '--scroll': progress }}>
-            <div className="tunnel-light" />
-            <div className="room-backdrop" />
-            <div className="room-wall room-wall-left" />
-            <div className="room-wall room-wall-right" />
-            <div className="room-floor" />
-            <div className="room-depth-lines" />
-            <div className="runner" aria-hidden="true"><span className="runner-shadow" /><span className="runner-head" /><span className="runner-body" /><span className="runner-arm runner-arm-left" /><span className="runner-arm runner-arm-right" /><span className="runner-leg runner-leg-left" /><span className="runner-leg runner-leg-right" /></div>
-            {projects.map((project, index) => {
-              const stop = projectStops[index];
-              const distance = Math.abs(progress - stop);
-              const focus = smooth(clamp(1 - distance * projects.length * 2.05, 0, 1));
-              const side = index % 2 === 0 ? 'left' : 'right';
-              const farYOffset = (stop - progress) * 290;
-              const wallX = side === 'left' ? 18 : 82;
-              const x = wallX + (50 - wallX) * focus;
-              const y = 36 + farYOffset - focus * 5;
-              const scale = clamp(0.38 + focus * 0.76, 0.22, 1.14);
-              const rotate = side === 'left' ? -18 + focus * 18 : 18 - focus * 18;
-              const fade = clamp(1 - Math.abs(farYOffset) / 135, 0.08, 1);
-              return (
-                <article key={project.id} className={`wall-photo wall-photo-${side} ${focus > 0.48 ? 'is-focused' : ''}`} style={{ '--focus': focus, left: `${x}%`, top: `${y}%`, opacity: Math.max(fade, focus), transform: `translate(-50%, -50%) scale(${scale}) rotateY(${rotate}deg)`, zIndex: focus > 0.48 ? 60 : 12 + index }}>
-                  <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
-                  <div className="photo-details"><span>{project.id} / {project.type}</span><h2>{project.title}</h2><p>{project.description}</p><a href={project.link} target={project.link.startsWith('http') ? '_blank' : undefined} rel="noreferrer">Live Preview</a></div>
-                </article>
-              );
-            })}
-            <div className="room-caption"><span>Now viewing</span><strong>{activeProject.title}</strong></div>
-            <div className="room-progress" aria-hidden="true"><span style={{ transform: `scaleX(${progress})` }} /></div>
+        <section className="work-section" id="work">
+          <p className="eyebrow">Selected Work</p>
+          <h2>Projects built with design, clarity, and business goals.</h2>
+          <div className="work-grid">
+            {projects.map((project) => (
+              <article className="work-card" key={project.id}>
+                <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+                <div className="work-card-content">
+                  <span>{project.id} / {project.type}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <a href={project.link} target={project.link.startsWith('http') ? '_blank' : undefined} rel="noreferrer">Live Preview</a>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
