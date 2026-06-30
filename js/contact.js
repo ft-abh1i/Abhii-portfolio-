@@ -30,7 +30,7 @@ function showPopup(title, message){
     clearTimeout(popupTimer);
     popupTimer = setTimeout(() => {
         popup.classList.remove('active');
-    }, 3500);
+    }, 6125);
 }
 
 function setFieldError(input, message){
