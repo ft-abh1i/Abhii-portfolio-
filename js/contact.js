@@ -7,7 +7,7 @@ const popup = document.createElement('div');
 popup.className = 'form-popup';
 popup.innerHTML = `
     <button type="button" aria-label="Close message">x</button>
-    <h3>Check the form</h3>
+    <h3>Form needs attention</h3>
     <p></p>
 `;
 document.body.appendChild(popup);
@@ -62,23 +62,23 @@ form.addEventListener('submit', function(event){
 
     if(name.length === 0){
         event.preventDefault();
-        setFieldError(nameInput, 'Your name is required.');
-        showPopup('Please enter your name before sending the message.');
+        setFieldError(nameInput, 'Name is required.');
+        showPopup('Please enter your name before submitting the form.');
         nameInput.focus();
         return;
     }
 
     if(!isValidEmail(email)){
         event.preventDefault();
-        setFieldError(emailInput, 'Enter a valid email address.');
-        showPopup('Please enter a valid email address so I can reply to you.');
+        setFieldError(emailInput, 'Use a valid email format.');
+        showPopup('Please enter a valid email address so I can reply to your message.');
         emailInput.focus();
         return;
     }
 
     if(message.length < 15){
         event.preventDefault();
-        setFieldError(messageInput, 'Write at least 15 characters.');
+        setFieldError(messageInput, 'Add more project details.');
         showPopup('Please describe your project in a little more detail.');
         messageInput.focus();
     }
