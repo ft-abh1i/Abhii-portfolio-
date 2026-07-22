@@ -29,3 +29,6 @@ jobs:
 
       - name: Build static portfolio
         run: npm run build
+
+      - name: Verify deployable output
+        run: npm run verify:export

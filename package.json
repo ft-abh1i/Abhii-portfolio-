@@ -2,10 +2,14 @@
   "name": "abhii-spatial-portfolio",
   "version": "2.0.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "verify:export": "node -e \"const fs=require('fs'); if(!fs.existsSync('out/index.html')){console.error('Missing out/index.html'); process.exit(1)}\""
   },
   "dependencies": {
     "@react-three/drei": "10.7.7",
