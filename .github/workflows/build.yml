@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Build static portfolio
+      - name: Build Next.js portfolio
         run: npm run build
 
-      - name: Verify deployable output
-        run: npm run verify:export
+      - name: Verify native Next.js output
+        run: npm run verify:build
