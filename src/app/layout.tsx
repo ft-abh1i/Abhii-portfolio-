@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope, Space_Mono } from "next/font/google";
+import { Manrope, Space_Mono } from "next/font/google";
 import "./globals.css";
-import "./reference-hero.css";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -13,13 +12,6 @@ const spaceMono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   weight: ["400", "700"],
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -64,7 +56,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${spaceMono.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${spaceMono.variable}`}>
       <body>{children}</body>
     </html>
   );
